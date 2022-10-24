@@ -5,18 +5,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long matricula;
 
-    @Column(name = "registration")
-    private String registration;
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "email")
     private String email;
@@ -24,9 +27,9 @@ public class User {
     public User() {
     }
 
-    public User(String registration, String email) {
+    public User(String name, String email) {
         super();
-        this.registration = registration;
+        this.name = name;
         this.email = email;
     }
 
@@ -38,12 +41,12 @@ public class User {
         this.matricula = matricula;
     }
 
-    public String getRegistration() {
-        return this.registration;
+    public String getName() {
+        return this.name;
     }
 
-    public void setRegistration(String registration) {
-        this.registration = registration;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {

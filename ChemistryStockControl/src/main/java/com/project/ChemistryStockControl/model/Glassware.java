@@ -2,10 +2,8 @@ package com.project.ChemistryStockControl.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "glasswares")
 public class Glassware extends Material {
 
     @Column(name = "capacity")
