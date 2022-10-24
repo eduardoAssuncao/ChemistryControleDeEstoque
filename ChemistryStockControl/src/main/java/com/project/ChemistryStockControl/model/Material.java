@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +24,9 @@ public class Material {
 
     @Column(name = "particulars")
     private String particulars;
+
+    @OneToOne
+    private Sector sector;
 
     public Material() {
     }

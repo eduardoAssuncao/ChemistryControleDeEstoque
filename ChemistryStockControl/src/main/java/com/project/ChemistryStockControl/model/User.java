@@ -57,4 +57,12 @@ public class User {
         this.email = email;
     }
 
+    public void visualizarSolicitacoes() {
+
+    }
+
+    public void procurarMateriais() {
+
+    }
+
 }
