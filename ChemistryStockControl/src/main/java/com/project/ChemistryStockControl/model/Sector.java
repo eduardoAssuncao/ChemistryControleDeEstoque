@@ -1,9 +1,11 @@
+
 package com.project.ChemistryStockControl.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Sector {
@@ -14,10 +16,10 @@ public class Sector {
 
     private int qtdEstoque;
 
-    private Material listaMateriais;
+    @OneToOne(mappedBy = "sector")
+    private Material material;
 
     public Sector() {
-
     }
 
     public Sector(int qtdEstoque) {
@@ -45,12 +47,12 @@ public class Sector {
 
     }
 
-    public Material getListaMateriais() {
-        return this.listaMateriais;
+    public Material getMaterial() {
+        return this.material;
     }
 
-    public void setListaMateriais(Material listaMateriais) {
-        this.listaMateriais = listaMateriais;
+    public void setMaterial(Material material) {
+        this.material = material;
     }
 
 }

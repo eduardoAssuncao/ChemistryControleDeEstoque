@@ -1,12 +1,14 @@
+
 package com.project.ChemistryStockControl.model;
 
 import java.sql.Date;
-
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//import javax.persistence.ManyToMany;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Solicitation {
@@ -17,10 +19,13 @@ public class Solicitation {
 
     private String matriculaSolicitante;
 
-    private Sector setor;
+    // private Sector sector;
 
-    // @ManyToMany
-    // private MaterialSolicitado materiais;
+    @ManyToOne
+    private Requester requester;
+
+    @ManyToMany
+    private List<Material> materials;
 
     private Date dataSolicitacao;
 
@@ -31,7 +36,7 @@ public class Solicitation {
     public Solicitation(String matriculaSolicitante, Sector setor, Date dataSolicitacao) {
         super();
         this.matriculaSolicitante = matriculaSolicitante;
-        this.setor = setor;
+        // this.setor = setor;
         this.dataSolicitacao = dataSolicitacao;
     }
 
@@ -51,20 +56,28 @@ public class Solicitation {
         this.matriculaSolicitante = matriculaSolicitante;
     }
 
-    public Sector getSetor() {
-        return this.setor;
-    }
-
-    public void setSetor(Sector setor) {
-        this.setor = setor;
-    }
-
     public Date getDataSolicitacao() {
         return this.dataSolicitacao;
     }
 
     public void setDataSolicitacao(Date dataSolicitacao) {
         this.dataSolicitacao = dataSolicitacao;
+    }
+
+    public Requester getRequester() {
+        return this.requester;
+    }
+
+    public void setRequester(Requester requester) {
+        this.requester = requester;
+    }
+
+    public List<Material> getMaterials() {
+        return this.materials;
+    }
+
+    public void setMaterials(List<Material> materials) {
+        this.materials = materials;
     }
 
 }

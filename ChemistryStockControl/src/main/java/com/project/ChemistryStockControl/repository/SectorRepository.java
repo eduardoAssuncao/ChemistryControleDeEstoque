@@ -1,3 +1,4 @@
+
 package com.project.ChemistryStockControl.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;

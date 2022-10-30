@@ -1,3 +1,4 @@
+
 package com.project.ChemistryStockControl.model;
 
 import java.util.List;
@@ -8,22 +9,22 @@ import javax.persistence.OneToMany;
 @Entity
 public class Requester extends User {
 
-    @OneToMany(targetEntity = Solicitation.class)
-    private List solicitationList;
+   @OneToMany
+   private List<Solicitation> solicitations;
 
-    public List getSolicitationList() {
-        return this.solicitationList;
-    }
+   public List<Solicitation> getSolicitations() {
+      return this.solicitations;
+   }
 
-    public void setSolicitationList(List solicitationList) {
-        this.solicitationList = solicitationList;
-    }
+   public void setSolicitations(List<Solicitation> solicitations) {
+      this.solicitations = solicitations;
+   }
 
-    public void realizarSolicitacao(/* Solicitação */) {
+   public void realizarSolicitacao() {
 
-    }
+   }
 
-    public void gerarFispq() {
+   public void gerarFispq() {
 
-    }
+   }
 }
