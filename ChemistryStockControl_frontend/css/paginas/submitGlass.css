@@ -1,0 +1,25 @@
+@import url(../css/styles.css);
+
+
+.btn{
+    color:#fff;
+    background-color: #228B22;
+  }
+
+  
+.form-signin .form-floating{
+    color:#494747;
+  }
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+
+  .input {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 20px;
+    
+  line-height: 1.5;
+  display: ;
+  }
