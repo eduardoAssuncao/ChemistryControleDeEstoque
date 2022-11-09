@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/paginas/authentication.css">
+    <link rel="stylesheet" href="../css/paginas/login.css">
+    <title>CHEMISTRY Controle de Estoque </title>
+
+    <link rel="icon" href="../img/chemistry - icon.png" />
+</head>
+
+<body class="text-center">
+
+    <main class="form-signin w-100 m-auto">
+        <img class="mb-4" src="../img/chemistry -logo.svg" alt="logo chemistry" width="300" height="100">
+        <form>
+            <h1 class="h3 mb-3 fw-bold">Cadastro</h1>
+
+            <div class="form-floating pb-2">
+                <input type="text" class="form-control" id="floatingName" placeholder="Nome">
+                <label for="floatingName">Nome</label>
+            </div>
+            <div class="form-floating pb-2">
+                <input type="text" class="form-control" id="floatingSurName" placeholder="Sobrenome">
+                <label for="floatingName">Sobrenome</label>
+            </div>
+
+            <li class="my-3">
+                <hr class="dropdown-divider bg-light" />
+            </li>
+
+            <div class="row row-cols-2">
+                <div class="col mb-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Professor(a)
+                        </label>
+                    </div>
+                </div>
+                <div class="col  mb-2">
+                    <div class="col form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Pesquisador(a)
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="pb-2">
+                <select class="form-select " aria-label="Default select example">
+                    <option selected>Selecione seu setor</option>
+                    <option value="1">GPPMI</option>
+                    <option value="2">DAQ</option>
+                    <option value="3">Grupo BIOMASSA</option>
+                    <option value="4">Lab4</option>
+                    <option value="5">Lab5</option>
+                    <option value="6">Lab9</option>
+                    <option value="7">Lab10</option>
+                </select>
+            </div>
+            <div class="form-floating pb-2">
+                <input type="text" class="form-control" id="floatingMat" placeholder="Matrícula">
+                <label for="floatingMat">Matrícula</label>
+            </div>
+
+            <li class="my-3 pb-1">
+                <hr class="dropdown-divider bg-light" />
+            </li>
+
+            <div class="form-floating pb-2">
+                <input type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com">
+                <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Senha</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingConfirPassword">Confirmar Senha</label>
+            </div>
+
+            <button class="w-100 btn btn-lg rounded-pill mt-3" type="submit">Enviar</button>
+
+            <p class="text-center text-muted mt-5 mb-0">Já tem conta?
+                <a href="../html/login.html" class="fw-bold text-body" id="link"><u>Login</u></a>
+            </p>
+
+            <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+        </form>
+
+    </main>
+</body>
+
+</html>

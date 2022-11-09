@@ -1,0 +1,112 @@
+html,
+body {
+    background-color: #111211;
+    color:#fff;
+}
+
+li {
+    list-style-type: none;
+}
+
+:root {
+    --offcanvas-width: 250px;
+    --topNavbarHeight: 66px;
+}
+
+.sidebar-nav {
+    width: var(--offcanvas-width);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-link .right-icon {
+    display: inline-flex;
+}
+
+.sidebar-link[aria-expanded="true"] .right-icon {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+    body {
+        overflow: auto !important;
+    }
+
+    main {
+        margin-left: var(--offcanvas-width);
+    }
+
+    /* this is to remove the backdrop */
+    .offcanvas-backdrop::before {
+        display: none;
+    }
+
+    .sidebar-nav {
+        -webkit-transform: none;
+        transform: none;
+        visibility: visible !important;
+        height: calc(100% - var(--topNavbarHeight));
+        top: var(--topNavbarHeight);
+    }
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar,
+.sidebar{
+    background-color: #000000;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.33594rem;
+    padding-bottom: 0.33594rem;
+    margin-right: 1rem;
+    font-size: 1.09375rem;
+    line-height: inherit;
+    white-space: nowrap
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-link .active {
+    background: rgb(72, 255, 0);
+}
+
+#logo {
+    width: 180px;
+}
+
+#sidebarnav {
+    background-color: #000000;
+}
+#offcanvas-body{
+    background-color: #000000;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #38a00f;
+}
+.card-header{
+    color: #000000;
+}
+.btn-sair {
+    background-color: red;
+    color: #fff;
+}
