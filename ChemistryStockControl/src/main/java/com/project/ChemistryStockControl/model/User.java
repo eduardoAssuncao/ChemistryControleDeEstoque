@@ -13,22 +13,27 @@ import javax.persistence.Table;
 public class User {
 
     @Id
-    @Column(name = "matricula", nullable = true)
+    @Column(name = "matricula")
     private Long matricula;
 
-    @Column(name = "name", nullable = true)
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "email", nullable = true)
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "senha")
+    private String senha;
 
     public User() {
     }
 
-    public User(String name, String email) {
+    public User(Long matricula, String name, String email, String senha) {
         super();
+        this.matricula = matricula;
         this.name = name;
         this.email = email;
+        this.senha = senha;
     }
 
     public Long getMatricula() {
@@ -49,6 +54,14 @@ public class User {
 
     public String getEmail() {
         return this.email;
+    }
+
+    public String getSenha() {
+        return this.senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public void setEmail(String email) {

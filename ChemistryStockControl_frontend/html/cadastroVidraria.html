@@ -20,7 +20,7 @@
 
 <body>
 <!-- Barra de navegação -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top" aria-label="barra de navegação">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
         aria-controls="offcanvasExample">
@@ -39,7 +39,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                <i class="bi bi-person-circle"></i>
+                <em class="bi bi-person-circle"></em>
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="#">Meu perfil</a></li>
@@ -52,7 +52,7 @@
           </ul>
         </div>
         <div class="d-flex col me-3 justify-content-end me-0">
-          <button type="button" class="btn btn-sair"><i class="bi bi-box-arrow-right"></i></button>
+          <button type="button" class="btn btn-sair"><em class="bi bi-box-arrow-right"></em></button>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
   <!-- Menu offcanvas -->
   <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
     <div id="offcanvas-body" class="offcanvas-body p-0 pt-3">
-      <nav class="navbar-dark">
+      <nav class="navbar-dark" aria-label="menu lateral">
         <ul class="navbar-nav nav-pills">
           <li>
             <a href="../index.html" class="nav-link px-3">

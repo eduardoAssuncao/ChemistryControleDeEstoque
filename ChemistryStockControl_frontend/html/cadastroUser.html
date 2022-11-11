@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/paginas/authentication.css">
     <link rel="stylesheet" href="../css/paginas/login.css">
-    <script src="../js/frontend/script.js" defer></script>
-    <script src = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <title>CHEMISTRY Controle de Estoque </title>
 
@@ -19,20 +17,15 @@
 </head>
 
 <body class="text-center">
-
+    
     <main class="form-signin w-100 m-auto">
         <img class="mb-4" src="../img/chemistry - logo.png" alt="logo chemistry" width="300" height="70">
-        <form>
+        <form id="form">
             <h1 class="h3 mb-3 fw-bold">Cadastro</h1>
 
             <div class="form-floating pb-2">
                 <input type="text" class="form-control nome" id="floatingName" placeholder="Nome">
                 <label for="floatingName">Nome</label>
-            </div>
-            <div class="form-floating pb-2">
-                <input type="text" class="form-control" id="floatingSurName" placeholder="Sobrenome">
-
-                <label for="floatingName">Sobrenome</label>
             </div>
 
             <li class="my-3">
@@ -48,7 +41,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="col  mb-2">
+                <div class="col mb-2">
                     <div class="col form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                         <label class="form-check-label" for="flexRadioDefault2">
@@ -57,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pb-2">
+            <div class="pb-2" id="setor">
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Selecione seu setor</option>
                     <option value="1">GPPMI</option>
@@ -88,11 +81,11 @@
                 <label for="floatingPassword">Senha</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" id="floatingPassword2" placeholder="Password">
                 <label for="floatingConfirPassword">Confirmar Senha</label>
             </div>
 
-            <button class="w-100 btn btn-lg rounded-pill mt-3" type="submit">Enviar</button>
+            <button id="enviar" class="w-100 btn btn-lg rounded-pill mt-3" type="submit">Enviar</button>
 
             <p class="text-center text-muted mt-5 mb-0">Já tem conta?
                 <a href="../html/login.html" class="fw-bold text-body" id="link"><u>Login</u></a>
@@ -102,6 +95,9 @@
         </form>
 
     </main>
+    <script type="text/javascript"
+        src="../js/frontend/jquery-3.5.1.js"></script>
+    <script src="../js/frontend/main.js" defer></script>
 </body>
 
 </html>
