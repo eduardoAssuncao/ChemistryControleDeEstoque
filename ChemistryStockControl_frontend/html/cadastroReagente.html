@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/paginas/dashboard.css">
+    <title>CHEMISTRY Controle de Estoque </title>
+
+    <link rel="icon" href="../img/chemistry - icon.png" />
+</head>
+
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand">
+                <img id="logo" src="../img/chemistry - logo.png" alt="Chemistry" class="align-middle">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
+                aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="row">
+                <div class="d-flex col me-3 justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Meu perfil</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="btn-danger dropdown-item" href="#">Configuração</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex col me-3 justify-content-end me-0">
+                    <button type="button" class="btn btn-sair"><i class="bi bi-box-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu offcanvas -->
+    <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
+        <div id="offcanvas-body" class="offcanvas-body p-0 pt-3">
+          <nav class="navbar-dark">
+            <ul class="navbar-nav nav-pills">
+              <li>
+                <a href="../index.html" class="nav-link px-3">
+                  <span class="me-2"><i class="bi bi-house"></i></span>
+                  <span>Página Inicial</span>
+                </a>
+              </li>
+              <li class="my-2">
+                <hr class="dropdown-divider bg-light" />
+              </li>
+              <li>
+                <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+                  materiais
+                </div>
+              </li>
+              <li>
+                <a href="../html/buscaMaterial.html" class="nav-link px-3">
+                  <span class="me-2"><i class="bi bi-search"></i></span>
+                  <span>Procurar Material</span>
+                </a>
+              </li>
+              <li>
+                <a href="..html/cadastroReagente.html" class="nav-link px-3 active">
+                  <span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-radioactive" viewBox="0 0 16 16">
+                      <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z" />
+                      <path
+                        d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992L9.653 5.496Zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+                    </svg></span>
+                  <span>Cadastrar Reagente</span>
+                </a>
+              </li>
+              <li>
+                <a href="../html/cadastroVidraria.html" class="nav-link px-3">
+                  <span class="me-2"><i class="bi bi-save"></i></span>
+                  <span">Cadastrar Vidraria</span>
+                </a>
+              </li>
+              <li>
+                <a href="../html/cadastroSetor.html" class="nav-link px-3">
+                  <span class="me-2"><i class="bi bi-tags"></i></span>
+                  <span>Cadastrar Setor</span>
+                </a>
+              </li>
+              <li>
+                <a href="../html/verSolicitacoes.html" class="nav-link px-3">
+                  <span class="me-2"><i class="bi bi-clipboard"></i></span>
+                  <span>Solicitações</span>
+                </a>
+              </li>
+              <li class="my-2">
+                <hr class="dropdown-divider bg-light" />
+              </li>
+              <li>
+                <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+                  relatórios
+                </div>
+              </li>
+              <li>
+                <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#layouts">
+                  <span class="me-2"><i class="bi bi-file-earmark-bar-graph"></i></span>
+                  <span>Estoque</span>
+                  <span class="ms-auto">
+                    <span class="right-icon">
+                      <i class="bi bi-chevron-down"></i>
+                    </span>
+                  </span>
+                </a>
+                <div class="collapse" id="layouts">
+                  <ul class="navbar-nav ps-3">
+                    <li>
+                      <a href="../html/relatorioDiario.html" class="nav-link px-3">
+                        <span class="me-2"><i class="bi bi-calendar2-date"></i></span>
+                        <span>Diário</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapse" id="layouts">
+                  <ul class="navbar-nav ps-3">
+                    <li>
+                      <a href="../html/relatorioMensal.html" class="nav-link px-3">
+                        <span class="me-2"><i class="bi bi-calendar2-month"></i></span>
+                        <span>Mensal</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="../html/relatorioPF.html" class="nav-link px-3">
+                  <span class="me-2"><i class="bi bi-file-text"></i></span>
+                  <span>Polícia Federal</span>
+                </a>
+              </li>
+              <li>
+                <a href="../html/relatorioExercito.html" class="nav-link px-3">
+                  <span class="me-2"><i class="bi bi-file-text"></i></span>
+                  <span>Exército</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+    <!-- Tela Dados -->
+    <main class="mt-5 pt-3">
+        <div class="container-fluid">
+            <div class="row mt-3">
+                <div class="col-md-12 m-2">
+                    <h3>Cadastrar Reagente</h3>
+                </div>
+            </div>
+            <form method="get" class="form-vertical  js-form-loading ms-2">
+                <div class="form-group">
+                    <label for="input-produto-nome">Nome do Reagente</label>
+                    <input id="input-produto-nome" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="input-marca-reagente">Marca</label>
+                    <input id="input-marca-reagente" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="input-produto-caracteristica">Características</label>
+                    <textarea id="input-produto-caracteristica" rows="3" class="form-control"></textarea>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <form>
+                            <label for="date" class="">Data de validade</label>
+                            <div class="input-group date" id="datepicker">
+                                <input type="text" class="form-control">
+                                <span class="input-group-append">
+                                    <span class="input-group-text bg-white">
+                                        <i class="bi bi-calendar"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="input-produto-qtd-frasco">Quatidade do Frasco</label>
+                            <input id="input-produto-qtd-frasco" type="text" class="form-control" placeholder="" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="input-unidade">Unidade</label>
+                            <select class="form-select" aria-label="select">
+                                <option selected>Selecione</option>
+                                <option value="ml">ml</option>
+                                <option value="g">g</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="input-setor">Setor</label>
+                            <select class="form-select" aria-label="select">
+                                <option selected>Selecione</option>
+                                <option value="1">GPPMI</option>
+                                <option value="2">DAQ</option>
+                                <option value="3">Grupo BIOMASSA</option>
+                                <option value="4">Lab4</option>
+                                <option value="5">Lab5</option>
+                                <option value="6">Lab9</option>
+                                <option value="7">Lab10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="input-produto-estoque">Estoque</label>
+                            <input id="input-produto-estoque" type="number" class="form-control"
+                                placeholder="Unidades" />
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex my-3 justify-content-md-end">
+                    <div class="d-grid gap-3 d-md-flex">
+                        <button class="btn btn-primary me-md-2" type="submit">Enviar</button>
+                        <a href="../html/cadastroReagente.html" class="btn  btn-danger me-md-2">Cancelar</a>
+                        <a href="#" class="btn  btn-link  aw-btn-link-danger" onclick="excluir()">Excluir este
+                            produto</a>
+                    </div>
+                </div>
+
+            </form>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <span><i class="bi bi-list-nested"></i></span> Reagentes Cadastrados
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-0" type="search" placeholder="Pesquisar por..."
+                                        aria-label="Search">
+                                    <button class="btn btn-secondary" type="button">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/frontend/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datepicker').datepicker();
+        });
+    </script>
+</body>
+
+</html>
