@@ -14,15 +14,9 @@ public class User {
 
     @Id
     @Column(name = "matricula")
-<<<<<<< HEAD
-    private Long matricula;
-
-    @Column(name = "name")
-=======
     private String matricula;
 
     @Column(name = "nome")
->>>>>>> b5c4592 (change model,repository,controll user and mainJS)
     private String name;
 
     @Column(name = "email")
@@ -34,11 +28,7 @@ public class User {
     public User() {
     }
 
-<<<<<<< HEAD
-    public User(Long matricula, String name, String email, String senha) {
-=======
     public User(String matricula, String name, String email, String senha) {
->>>>>>> b5c4592 (change model,repository,controll user and mainJS)
         super();
         this.matricula = matricula;
         this.name = name;
@@ -64,14 +54,6 @@ public class User {
 
     public String getEmail() {
         return this.email;
-    }
-
-    public String getSenha() {
-        return this.senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     public void setEmail(String email) {

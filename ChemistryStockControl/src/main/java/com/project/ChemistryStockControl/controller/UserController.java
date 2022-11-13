@@ -20,11 +20,7 @@ import com.project.ChemistryStockControl.exception.ResourceNotFoundException;
 import com.project.ChemistryStockControl.model.User;
 import com.project.ChemistryStockControl.repository.UserRepository;
 
-<<<<<<< HEAD
-@CrossOrigin(origins = "*")
-=======
 @CrossOrigin(origins = { "*" })
->>>>>>> b5c4592 (change model,repository,controll user and mainJS)
 @RestController
 @RequestMapping("/api/v1/")
 public class UserController {
