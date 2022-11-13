@@ -14,9 +14,15 @@ public class User {
 
     @Id
     @Column(name = "matricula")
+<<<<<<< HEAD
     private Long matricula;
 
     @Column(name = "name")
+=======
+    private String matricula;
+
+    @Column(name = "nome")
+>>>>>>> b5c4592 (change model,repository,controll user and mainJS)
     private String name;
 
     @Column(name = "email")
@@ -28,7 +34,11 @@ public class User {
     public User() {
     }
 
+<<<<<<< HEAD
     public User(Long matricula, String name, String email, String senha) {
+=======
+    public User(String matricula, String name, String email, String senha) {
+>>>>>>> b5c4592 (change model,repository,controll user and mainJS)
         super();
         this.matricula = matricula;
         this.name = name;
@@ -36,11 +46,11 @@ public class User {
         this.senha = senha;
     }
 
-    public Long getMatricula() {
+    public String getMatricula() {
         return this.matricula;
     }
 
-    public void setMatricula(Long matricula) {
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 
@@ -66,6 +76,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSenha() {
+        return this.senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public void visualizarSolicitacoes() {

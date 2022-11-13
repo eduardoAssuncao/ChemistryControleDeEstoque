@@ -20,7 +20,11 @@ import com.project.ChemistryStockControl.exception.ResourceNotFoundException;
 import com.project.ChemistryStockControl.model.User;
 import com.project.ChemistryStockControl.repository.UserRepository;
 
+<<<<<<< HEAD
 @CrossOrigin(origins = "*")
+=======
+@CrossOrigin(origins = { "*" })
+>>>>>>> b5c4592 (change model,repository,controll user and mainJS)
 @RestController
 @RequestMapping("/api/v1/")
 public class UserController {
@@ -41,19 +45,19 @@ public class UserController {
     }
 
     // get user by id rest api
-    @GetMapping("/users/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id) {
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("User not exist with id: " + id));
+    @GetMapping("/users/{matricula}")
+    public ResponseEntity<User> getUserById(@PathVariable String matricula) { // change this for matricula
+        User user = userRepository.findByMatricula(matricula)
+                .orElseThrow(() -> new ResourceNotFoundException("User not exist with id: " + matricula));
         return ResponseEntity.ok(user);
     }
 
     // update user rest api
-    @PutMapping("/users/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
+    @PutMapping("/users/{matricula}")
+    public ResponseEntity<User> updateUser(@PathVariable String matricula, @RequestBody User userDetails) {
 
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
+        User user = userRepository.findByMatricula(matricula)
+                .orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + matricula));
 
         user.setEmail(userDetails.getEmail());
         user.setName(userDetails.getName());
@@ -63,10 +67,10 @@ public class UserController {
     }
 
     // delete user rest api
-    @DeleteMapping("/users/{id}")
-    public ResponseEntity<Map<String, Boolean>> deleteUser(@PathVariable Long id) {
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
+    @DeleteMapping("/users/{matricula}")
+    public ResponseEntity<Map<String, Boolean>> deleteUser(@PathVariable String matricula) {
+        User user = userRepository.findByMatricula(matricula)
+                .orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + matricula));
 
         userRepository.delete(user);
         Map<String, Boolean> response = new HashMap<>();
