@@ -1,9 +1,11 @@
 package com.project.ChemistryStockControl.model;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
+@DiscriminatorValue(value = "Glassware")
 public class Glassware extends Material {
 
     @Column(name = "capacity")

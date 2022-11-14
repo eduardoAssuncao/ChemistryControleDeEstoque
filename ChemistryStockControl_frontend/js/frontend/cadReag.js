@@ -8,7 +8,7 @@ const iestoque = document.querySelector("#quantity")
 const iparticulars = document.querySelector("#particulars")
 
 function saveReagente(){
-    fetch("http://localhost:8080/api/v1/materials",
+    fetch("http://localhost:8080/api/v1/reagents",
         {
             headers: {
             "Accept": "application/json",
