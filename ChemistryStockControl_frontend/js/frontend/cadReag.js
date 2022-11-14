@@ -3,8 +3,9 @@ const inome = document.querySelector("#nomeReagente")
 const imarca = document.querySelector("#brand")
 const ival = document.querySelector("#validity")
 const iqdtLeft = document.querySelector("#qtdLeft")
-const isetor = document.querySelector("#setor")
+//const isetor = document.querySelector("#setor")
 const iestoque = document.querySelector("#quantity")
+const iparticulars = document.querySelector("#particulars")
 
 function saveReagente(){
     fetch("http://localhost:8080/api/v1/materials",
@@ -16,10 +17,11 @@ function saveReagente(){
         method: "POST",
         body: JSON.stringify({
             name: inome.value,
-            marca: imarca.value,
-            validade: ival.value,
-            qtdLeft: iqdtLeft.value,
-            setor: isetor.value,
+            brand: imarca.value,
+            particulars: iparticulars.value,
+            validity: ival.value,
+            quantity: iqdtLeft.value,
+            //sector: isetor.value,
             estoque: iestoque.value
         })
     })

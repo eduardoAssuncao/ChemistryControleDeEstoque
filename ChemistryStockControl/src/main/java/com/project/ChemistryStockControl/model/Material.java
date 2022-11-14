@@ -1,6 +1,6 @@
 package com.project.ChemistryStockControl.model;
 
-import java.util.Date;
+//import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -29,7 +29,7 @@ public class Material {
     @Column(name = "name")
     private String name;
 
-    @Column(name="brand")
+    @Column(name = "brand")
     private String brand;
 
     @Column(name = "particulars")
@@ -56,7 +56,6 @@ public class Material {
         this.sector = sector;
     }
 
-
     public long getCodMaterial() {
         return this.codMaterial;
     }
@@ -71,6 +70,22 @@ public class Material {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getBrand() {
+        return this.brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getQuantity() {
+        return this.quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public String getParticulars() {

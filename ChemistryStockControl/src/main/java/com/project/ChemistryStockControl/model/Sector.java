@@ -9,7 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Sector {
@@ -53,7 +52,6 @@ public class Sector {
     public void gerarRelatorio() {
 
     }
-
 
     public List<Material> getMaterial() {
         return this.material;
