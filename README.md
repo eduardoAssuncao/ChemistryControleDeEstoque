@@ -3,7 +3,7 @@ Repositório da aplicação Chemistry que servirá para o controle de estoque e 
 
 # Chemistry: controle de estoque
 <fig>
-<img src="https://i.imgur.com/k9X9XDF.jpg" alt="Logo e nome do sistema. A logo é uma vidraria balão fundo redondo verde.">
+<img src="https://i.imgur.com/PPJIJ6l.jpg" alt="Logo e nome do sistema. A logo é uma vidraria balão fundo redondo verde.">
 </fig>
 
 ## Ferramentas
