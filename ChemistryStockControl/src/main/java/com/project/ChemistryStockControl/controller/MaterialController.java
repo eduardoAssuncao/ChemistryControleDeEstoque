@@ -20,7 +20,7 @@ import com.project.ChemistryStockControl.exception.ResourceNotFoundException;
 import com.project.ChemistryStockControl.model.Material;
 import com.project.ChemistryStockControl.repository.MaterialRepository;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1/")
 public class MaterialController {

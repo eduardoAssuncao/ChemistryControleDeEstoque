@@ -3,8 +3,9 @@ const inome = document.querySelector("#floatingName")
 const imat = document.querySelector("#floatingMat")
 const iemail = document.querySelector("#floatingInput")
 const isenha = document.querySelector("#floatingPassword")
+const isetor = document.querySelector("#setor")
 
-function save(){
+function saveUser(){
     fetch("http://localhost:8080/api/v1/users",
         {
             headers: {
@@ -16,7 +17,8 @@ function save(){
             name: inome.value,
             matricula: imat.value,
             email: iemail.value,
-            senha: isenha.value
+            senha: isenha.value,
+            setor: isetor.value
         })
     })
     .then(function(res) {console.log(res)})
@@ -25,5 +27,5 @@ function save(){
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-    save();
+    saveUser();
 });

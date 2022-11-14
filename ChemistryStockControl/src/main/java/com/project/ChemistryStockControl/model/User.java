@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -25,15 +26,19 @@ public class User {
     @Column(name = "senha")
     private String senha;
 
+    @ManyToOne
+    private Sector setor;
+
     public User() {
     }
 
-    public User(String matricula, String name, String email, String senha) {
+    public User(String matricula, String name, String email, String senha, Sector setor) {
         super();
         this.matricula = matricula;
         this.name = name;
         this.email = email;
         this.senha = senha;
+        this.setor = setor;
     }
 
     public String getMatricula() {

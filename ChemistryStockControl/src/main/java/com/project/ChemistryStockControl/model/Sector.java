@@ -1,10 +1,14 @@
 
 package com.project.ChemistryStockControl.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -16,8 +20,11 @@ public class Sector {
 
     private int qtdEstoque;
 
-    @OneToOne(mappedBy = "sector")
-    private Material material;
+    @OneToMany(mappedBy = "sector", cascade = CascadeType.ALL)
+    private List<Material> material;
+
+    @OneToMany(mappedBy = "setor", cascade = CascadeType.ALL)
+    private List<User> users;
 
     public Sector() {
     }
@@ -47,12 +54,21 @@ public class Sector {
 
     }
 
-    public Material getMaterial() {
+
+    public List<Material> getMaterial() {
         return this.material;
     }
 
-    public void setMaterial(Material material) {
+    public void setMaterial(List<Material> material) {
         this.material = material;
+    }
+
+    public List<User> getUsers() {
+        return this.users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
 }

@@ -173,18 +173,19 @@
                     <h3>Cadastrar Reagente</h3>
                 </div>
             </div>
-            <form method="get" class="form-vertical  js-form-loading ms-2">
+
+            <form id="form" class="form-vertical  js-form-loading ms-2">
                 <div class="form-group">
                     <label for="input-produto-nome">Nome do Reagente</label>
-                    <input id="input-produto-nome" type="text" class="form-control" />
+                    <input id="input-produto-nome" id="nomeReagente" type="text" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label for="input-marca-reagente">Marca</label>
-                    <input id="input-marca-reagente" type="text" class="form-control" />
+                    <input id="input-marca-reagente" id="brand" type="text" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label for="input-produto-caracteristica">Características</label>
-                    <textarea id="input-produto-caracteristica" rows="3" class="form-control"></textarea>
+                    <textarea id="input-produto-caracteristica" id="particulars" rows="3" class="form-control"></textarea>
                 </div>
 
                 <div class="row">
@@ -193,7 +194,7 @@
                         <form>
                             <label for="date" class="">Data de validade</label>
                             <div class="input-group date" id="datepicker">
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="validity">
                                 <span class="input-group-append">
                                     <span class="input-group-text bg-white">
                                         <i class="bi bi-calendar"></i>
@@ -205,8 +206,8 @@
 
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="input-produto-qtd-frasco">Quatidade do Frasco</label>
-                            <input id="input-produto-qtd-frasco" type="text" class="form-control" placeholder="" />
+                            <label for="input-produto-qtd-frasco">Quantidade do Frasco</label>
+                            <input id="input-produto-qtd-frasco" id="qtdLeft" type="text" class="form-control" placeholder="" />
                         </div>
                     </div>
 
@@ -225,7 +226,7 @@
                     <div class="col-sm-3">
                         <div class="form-group">
                             <label for="input-setor">Setor</label>
-                            <select class="form-select" aria-label="select">
+                            <select class="form-select" id="setor" aria-label="select">
                                 <option selected>Selecione</option>
                                 <option value="1">GPPMI</option>
                                 <option value="2">DAQ</option>
@@ -240,15 +241,18 @@
                     <div class="col-sm-3">
                         <div class="form-group">
                             <label for="input-produto-estoque">Estoque</label>
-                            <input id="input-produto-estoque" type="number" class="form-control"
+                            <input id="input-produto-estoque" id="quantity" type="number" class="form-control"
                                 placeholder="Unidades" />
                         </div>
                     </div>
                 </div>
                 <div class="d-flex my-3 justify-content-md-end">
                     <div class="d-grid gap-3 d-md-flex">
-                        <button class="btn btn-primary me-md-2" type="submit">Enviar</button>
+                        
+                        <button id="enviar" class="btn btn-primary me-md-2" type="submit"> Enviar</button>
+
                         <a href="../html/cadastroReagente.html" class="btn  btn-danger me-md-2">Cancelar</a>
+
                         <a href="#" class="btn  btn-link  aw-btn-link-danger" onclick="excluir()">Excluir este
                             produto</a>
                     </div>
@@ -278,12 +282,8 @@
         </div>
     </main>
     <script src="../js/frontend/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('#datepicker').datepicker();
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>    
+    <script src="../js/frontend/cadReag.js"></script>
 </body>
 
 </html>

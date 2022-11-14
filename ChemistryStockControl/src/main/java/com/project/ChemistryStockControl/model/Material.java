@@ -1,8 +1,11 @@
 package com.project.ChemistryStockControl.model;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,12 +13,13 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "materials")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo", length = 50, discriminatorType = DiscriminatorType.STRING)
 public class Material {
 
     @Id
@@ -25,10 +29,16 @@ public class Material {
     @Column(name = "name")
     private String name;
 
+    @Column(name="brand")
+    private String brand;
+
     @Column(name = "particulars")
     private String particulars;
 
-    @OneToOne
+    @Column(name = "quantity")
+    private int quantity;
+
+    @ManyToOne
     private Sector sector;
 
     @ManyToMany
@@ -37,11 +47,15 @@ public class Material {
     public Material() {
     }
 
-    public Material(String name, String particulars) {
+    public Material(String name, String brand, String particulars, int quantity, Sector sector) {
         super();
         this.name = name;
+        this.brand = brand;
         this.particulars = particulars;
+        this.quantity = quantity;
+        this.sector = sector;
     }
+
 
     public long getCodMaterial() {
         return this.codMaterial;

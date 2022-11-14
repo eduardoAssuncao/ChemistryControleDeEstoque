@@ -3,9 +3,11 @@ package com.project.ChemistryStockControl.model;
 import java.sql.Date;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
+@DiscriminatorValue(value = "Reagente")
 public class Reagent extends Material {
 
     @Column(name = "validity")
@@ -14,14 +16,18 @@ public class Reagent extends Material {
     @Column(name = "controlled")
     private boolean controlled;
 
+    @Column(name = "quantLeft")
+    private int quantLeft;
+    
     public Reagent() {
 
     }
 
-    public Reagent(Date validity, boolean controlled) {
+    public Reagent(Date validity, boolean controlled, int qtdLeft) {
         super();
         this.validity = validity;
         this.controlled = controlled;
+        this.quantLeft = qtdLeft;
     }
 
     public Date getValidity() {
