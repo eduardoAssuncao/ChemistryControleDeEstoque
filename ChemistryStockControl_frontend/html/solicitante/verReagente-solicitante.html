@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<head lang="en">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="../css/style.min.css" />
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/paginas/submitGlass.css">
-    <link rel="stylesheet" href="../css/paginas/dashboard.css">
-    
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/paginas/dashboard.css">
+  <link rel="stylesheet" href="../css/paginas/verReagente.css">
+  <title>CHEMISTRY Controle de Estoque </title>
 
-    <title>CHEMISTRY Controle de Estoque </title>
-
-    <link rel="icon" href="../img/chemistry - icon.png" />
+  <link rel="icon" href="../img/chemistry - icon.png" />
 </head>
 
 <body>
-<!-- Barra de navegação -->
-<nav class="navbar navbar-expand-lg fixed-top">
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
         aria-controls="offcanvasExample">
         <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
       </button>
-      <a href="../index.html" class="navbar-brand">
+      <a href="index.html" class="navbar-brand">
         <img id="logo" src="../img/chemistry - logo.png" alt="Chemistry" class="align-middle">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
@@ -64,7 +62,7 @@
       <nav class="navbar-dark">
         <ul class="navbar-nav nav-pills">
           <li>
-            <a href="../index.html" class="nav-link active px-3">
+            <a href="index.html" class="nav-link px-3">
               <span class="me-2"><i class="bi bi-house"></i></span>
               <span>Página Inicial</span>
             </a>
@@ -78,13 +76,13 @@
             </div>
           </li>
           <li>
-            <a href="#" class="nav-link px-3">
+            <a href="buscaMaterial.html" class="nav-link px-3 active">
               <span class="me-2"><i class="bi bi-search"></i></span>
               <span>Procurar Material</span>
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link px-3">
+            <a href="cadastroReagente.html" class="nav-link px-3">
               <span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="bi bi-radioactive" viewBox="0 0 16 16">
                   <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z" />
@@ -95,19 +93,19 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link px-3">
+            <a href="cadastroVidraria.html" class="nav-link px-3">
               <span class="me-2"><i class="bi bi-save"></i></span>
-              <span>Cadastrar Vidraria</span>
+              <span">Cadastrar Vidraria</span>
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link px-3">
+            <a href="cadastroSetor.html" class="nav-link px-3">
               <span class="me-2"><i class="bi bi-tags"></i></span>
               <span>Cadastrar Setor</span>
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link px-3">
+            <a href="verSolicitacoes.html" class="nav-link px-3">
               <span class="me-2"><i class="bi bi-clipboard"></i></span>
               <span>Solicitações</span>
             </a>
@@ -133,7 +131,7 @@
             <div class="collapse" id="layouts">
               <ul class="navbar-nav ps-3">
                 <li>
-                  <a href="#" class="nav-link px-3">
+                  <a href="relatorioDiario.html" class="nav-link px-3">
                     <span class="me-2"><i class="bi bi-calendar2-date"></i></span>
                     <span>Diário</span>
                   </a>
@@ -143,7 +141,7 @@
             <div class="collapse" id="layouts">
               <ul class="navbar-nav ps-3">
                 <li>
-                  <a href="#" class="nav-link px-3">
+                  <a href="relatorioMensal.html" class="nav-link px-3">
                     <span class="me-2"><i class="bi bi-calendar2-month"></i></span>
                     <span>Mensal</span>
                   </a>
@@ -152,13 +150,13 @@
             </div>
           </li>
           <li>
-            <a href="#" class="nav-link px-3">
+            <a href="relatorioPF.html" class="nav-link px-3">
               <span class="me-2"><i class="bi bi-file-text"></i></span>
               <span>Polícia Federal</span>
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link px-3">
+            <a href="relatorioExercito.html" class="nav-link px-3">
               <span class="me-2"><i class="bi bi-file-text"></i></span>
               <span>Exército</span>
             </a>
@@ -172,51 +170,84 @@
   <main class="mt-5 pt-3">
     <div class="container-fluid">
       <div class="row mt-3">
-        <div class="col-md-12 m-2">
-          <h4>Cadastrar Vidraria</h4>
+        <div class="col-md-12">
+          <div class="card card-body printableArea">
+            <h3 id="nomeReagente"><b>ÁCIDO SULFÚRICO 95%</b></h3>
+            <hr />      
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="input-marca-reagente">Marca</label>
+                      <input id="input-marca-reagente" type="text" class="form-control" value="QUIMEX" readonly/>
+                    </div>
+                  </div>                  
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="input-setor">Setor</label>
+                      <select class="form-select" aria-label="select" aria-disabled="true">
+                        <option selected>Selecione</option>
+                        <option value="1">GPPMI</option>
+                        <option value="2">DAQ</option>
+                        <option value="3" selected>Grupo BIOMASSA</option>
+                        <option value="4">Lab4</option>
+                        <option value="5">Lab5</option>
+                        <option value="6">Lab9</option>
+                        <option value="7">Lab10</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <form>
+                      <label for="date" class="">Data de validade</label>
+                      <div class="input-group date" id="dataValid">
+                          <input type="date" class="form-control" value="2022-05-22">
+                      </div>
+                    </form>
+                  </div>
+                  
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="input-produto-caracteristica">Características</label>
+                      <textarea id="input-produto-caracteristica" rows="3" class="form-control" readonly></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="input-unidade">Unidade</label>
+                      <select class="form-select" aria-label="select" aria-disabled="true">
+                        <option selected>Selecione</option>
+                        <option value="ml" selected>ml</option>
+                        <option value="g">g</option>
+                      </select>
+                    </div>
+                  </div>   
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="input-produto-estoque">Estoque</label>
+                      <input id="input-produto-estoque" type="number" class="form-control" placeholder="Unidades" readonly/>
+                    </div>
+                  </div>     
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="input-produto-qtd-frasco">Quatidade do Frasco</label>
+                      <input id="input-produto-qtd-frasco" type="text" class="form-control" placeholder="" readonly/>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex my-3 justify-content-md-end">
+                  <div class="d-grid gap-3 d-md-flex">                  
+                    <a href="buscaMaterial.html" class="btn  btn-danger me-md-2">Voltar</a> 
+                    <a href="novaSolicitacao.html" class="btn  btn-verde me-md-2">Criar Solicitação</a>  
+                  </div>
+                </div>
+            </div>
         </div>
       </div>
-      <form>
-        <div class="form-group pb-2 col-6">
-            <label for="cod">Código</label>
-            <input type="text" class="form-control" id="cod" placeholder="Código da Vidraria">
-        </div>
-        
-        <div class="form-group pb-2 col-6">
-            <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Nome da Vidraria">
-
-        </div>
-        <div class="form-group pb-2 col-6">
-            <label for="capacidade">Capacidade</label>
-            <input type="text" class="form-control" id="capacidade" placeholder="Capacidade em ml">
-
-        </div>
-        
-        <div class="from-group pb-4 col-6">
-            <label for = "inputState">Setor</label>
-            <select id="inputState" class="form-select" >
-                <option selected>Selecione o setor</option>
-                <option value="1">GPPMI</option>
-                <option value="2">DAQ</option>
-                <option value="3">Grupo BIOMASSA</option>
-                <option value="4">Lab4</option>
-                <option value="5">Lab5</option>
-                <option value="6">Lab9</option>
-                <option value="7">Lab10</option>
-            </select>
-        </div>
-
-        <div class="form-group pb-2 col-6">
-            <label for="floatingInput">Descrição</label>
-            <textarea class="form-control"  placeholder="Descreva as características do produto"></textarea>
-        </div>
-
-        <button class="btn btn-lg rounded-pill mt-3" type="submit">Cadastrar</button>
-    </form>
-      </div>
-    </div>
   </main>
-  <script src="./js/frontend/bootstrap.bundle.min.js"></script>
+  <script src="../js/frontend/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+  <script src="../js/frontend/main.js"></script>
+
 </body>
+
+</html>

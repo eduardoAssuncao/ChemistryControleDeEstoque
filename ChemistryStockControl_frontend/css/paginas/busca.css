@@ -1,0 +1,15 @@
+.container-pesquisa {
+    width: 555px;
+    margin: auto;
+}
+.input-group>#inputMat{
+    min-width: 4rem;
+    max-width: 25rem;
+}
+.input-group>.selectpicker{
+    min-width: 4rem;
+    max-width: 8rem;
+}
+.dropdown-divider {
+    border-top: 1px solid #4c4d4e
+}

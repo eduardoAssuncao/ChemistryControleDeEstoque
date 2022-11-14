@@ -1,0 +1,12 @@
+.card-body{
+    background-color: #111211;
+}
+
+.form-group>.form-select{
+    pointer-events: none;
+    touch-action: none;
+}
+
+.btn-link{
+    color: rgb(72, 255, 0);
+}
