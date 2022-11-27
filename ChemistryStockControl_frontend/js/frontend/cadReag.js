@@ -21,7 +21,7 @@ function saveReagente(){
             particulars: iparticulars.value,
             validity: ival.value,
             quantity: iqdtLeft.value,
-            //sector: isetor.value,
+            //sector: isetor.options[isetor.selectedIndex].text,
             estoque: iestoque.value
         })
     })

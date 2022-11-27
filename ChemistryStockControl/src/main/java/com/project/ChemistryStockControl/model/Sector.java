@@ -17,6 +17,8 @@ public class Sector {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codSector;
 
+    // adicionar variável nome para setor
+    // private String nomeSetor;
     private int qtdEstoque;
 
     @OneToMany(mappedBy = "sector", cascade = CascadeType.ALL)
