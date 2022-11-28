@@ -6,6 +6,7 @@ const iqdtLeft = document.querySelector("#qtdLeft")
 //const isetor = document.querySelector("#setor")
 const iestoque = document.querySelector("#quantity")
 const iparticulars = document.querySelector("#particulars")
+//const iunidade = document.querySelector("#unidade")
 
 function saveReagente(){
     fetch("http://localhost:8080/api/v1/reagents",
@@ -22,6 +23,7 @@ function saveReagente(){
             validity: ival.value,
             quantity: iqdtLeft.value,
             //sector: isetor.options[isetor.selectedIndex].text,
+            //unidade: iunidade.value, -> pegar informação da unidade (ml, g) e adicinar essa informação no backend
             estoque: iestoque.value
         })
     })

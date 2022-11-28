@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+
 <head lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,16 +12,16 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/paginas/submitGlass.css">
     <link rel="stylesheet" href="../css/paginas/dashboard.css">
-    
+
 
     <title>CHEMISTRY Controle de Estoque </title>
 
     <link rel="icon" href="../img/chemistry - icon.png" />
-</head>
+  </head>
 
 <body>
-<!-- Barra de navegação -->
-<nav class="navbar navbar-expand-lg fixed-top" aria-label="barra de navegação">
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="barra de navegação">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
         aria-controls="offcanvasExample">
@@ -176,47 +177,48 @@
           <h4>Cadastrar Vidraria</h4>
         </div>
       </div>
-      <form>
+      <form id="form">
         <div class="form-group pb-2 col-6">
-            <label for="cod">Código</label>
-            <input type="text" class="form-control" id="cod" placeholder="Código da Vidraria">
+          <label for="cod">Código</label>
+          <input type="text" class="form-control" id="cod" placeholder="Código da Vidraria">
         </div>
-        
+
         <div class="form-group pb-2 col-6">
-            <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Nome da Vidraria">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder="Nome da Vidraria">
 
         </div>
         <div class="form-group pb-2 col-6">
-            <label for="capacidade">Capacidade</label>
-            <input type="text" class="form-control" id="capacidade" placeholder="Capacidade em ml">
+          <label for="capacidade">Capacidade</label>
+          <input type="text" class="form-control" id="capacidade" placeholder="Capacidade em ml">
 
         </div>
-        
+
         <div class="from-group pb-4 col-6">
-            <label for = "inputState">Setor</label>
-            <select id="inputState" class="form-select" >
-                <option selected>Selecione o setor</option>
-                <option value="1">GPPMI</option>
-                <option value="2">DAQ</option>
-                <option value="3">Grupo BIOMASSA</option>
-                <option value="4">Lab4</option>
-                <option value="5">Lab5</option>
-                <option value="6">Lab9</option>
-                <option value="7">Lab10</option>
-            </select>
+          <label for="inputState">Setor</label>
+          <select id="inputSetor" class="form-select">
+            <option selected>Selecione o setor</option>
+            <option value="1">GPPMI</option>
+            <option value="2">DAQ</option>
+            <option value="3">Grupo BIOMASSA</option>
+            <option value="4">Lab4</option>
+            <option value="5">Lab5</option>
+            <option value="6">Lab9</option>
+            <option value="7">Lab10</option>
+          </select>
         </div>
 
         <div class="form-group pb-2 col-6">
-            <label for="floatingInput">Descrição</label>
-            <textarea class="form-control"  placeholder="Descreva as características do produto"></textarea>
+          <label for="floatingInput">Descrição</label>
+          <textarea class="form-control" id="descricao" placeholder="Descreva as características do produto"></textarea>
         </div>
 
         <button class="btn btn-lg rounded-pill mt-3" type="submit">Cadastrar</button>
-    </form>
-      </div>
+      </form>
+    </div>
     </div>
   </main>
   <script src="./js/frontend/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+  <script src="/ChemistryControleDeEstoque/ChemistryStockControl_frontend/js/frontend/cadVidr.js"></script>
 </body>
