@@ -20,8 +20,8 @@ function saveVidraria(){
             capacity: icapacidade.value,
             //brand: imarca.value, -> adicionar infomação na página HTML
             //quantity: iquantidade.value, -> adicionar informação na página HTML
-            particulars: idescricao.value,
-            sector: isetor.value
+            particulars: idescricao.value
+            //sector: isetor.value
         })
     })
     .then(function(res) {console.log(res)})

@@ -3,7 +3,7 @@ const inome = document.querySelector("#nomeReagente")
 const imarca = document.querySelector("#brand")
 const ival = document.querySelector("#validity")
 const iqdtLeft = document.querySelector("#qtdLeft")
-//const isetor = document.querySelector("#setor")
+const isetor = document.querySelector("#setor")
 const iestoque = document.querySelector("#quantity")
 const iparticulars = document.querySelector("#particulars")
 //const iunidade = document.querySelector("#unidade")
@@ -22,9 +22,10 @@ function saveReagente(){
             particulars: iparticulars.value,
             validity: ival.value,
             quantity: iqdtLeft.value,
-            //sector: isetor.options[isetor.selectedIndex].text,
+            quantLeft: iestoque.value
+            //sector: isetor.options[isetor.selectedIndex].value,
             //unidade: iunidade.value, -> pegar informação da unidade (ml, g) e adicinar essa informação no backend
-            estoque: iestoque.value
+            //estoque: iestoque.value
         })
     })
     .then(function(res) {console.log(res)})

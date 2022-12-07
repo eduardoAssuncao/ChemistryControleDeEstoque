@@ -29,19 +29,19 @@ public class GlasswareController {
     private GlasswareRepository glasswareRepository;
 
     // get all glasswares
-    @GetMapping("/glassware")
+    @GetMapping("/glasswares")
     public List<Glassware> getAllGlasswares() {
         return glasswareRepository.findAll();
     }
 
     // create glassware rest api
-    @PostMapping("/glassware")
+    @PostMapping("/glasswares")
     public Glassware createGlassware(@RequestBody Glassware glassware) {
         return glasswareRepository.save(glassware);
     }
 
     // get glassware by id rest api
-    @GetMapping("/glassware/{id}")
+    @GetMapping("/glasswares/{id}")
     public ResponseEntity<Glassware> getGlaswareById(@PathVariable Long id) {
 
         Glassware glassware = glasswareRepository.findById(id)
@@ -50,7 +50,7 @@ public class GlasswareController {
     }
 
     // update glassware rest api
-    @PutMapping("/glassware/{id}")
+    @PutMapping("/glasswares/{id}")
     public ResponseEntity<Glassware> updateGlassware(@PathVariable Long id, @RequestBody Glassware glasswareDetails) {
 
         Glassware glassware = glasswareRepository.findById(id)
@@ -64,7 +64,7 @@ public class GlasswareController {
     }
 
     // delete glassware rest api
-    @DeleteMapping("/glassware/{id}")
+    @DeleteMapping("/glasswares/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteGlassware(@PathVariable Long id) {
         Glassware glassware = glasswareRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Glassware not exist with id :" + id));
