@@ -38,8 +38,8 @@ public class Material {
     @Column(name = "quantity")
     private int quantity;
 
-    @ManyToOne
-    private Sector sector;
+    // @ManyToOne
+    // private Sector sector;
 
     @ManyToMany
     private List<Solicitation> solicitations;
@@ -47,13 +47,13 @@ public class Material {
     public Material() {
     }
 
-    public Material(String name, String brand, String particulars, int quantity, Sector sector) {
+    public Material(String name, String brand, String particulars, int quantity) {
         super();
         this.name = name;
         this.brand = brand;
         this.particulars = particulars;
         this.quantity = quantity;
-        this.sector = sector;
+        // this.sector = sector;
     }
 
     public long getCodMaterial() {
@@ -96,13 +96,13 @@ public class Material {
         this.particulars = particulars;
     }
 
-    public Sector getSector() {
-        return this.sector;
-    }
+    // public Sector getSector() {
+    //     return this.sector;
+    // }
 
-    public void setSector(Sector sector) {
-        this.sector = sector;
-    }
+    // public void setSector(Sector sector) {
+    //     this.sector = sector;
+    // }
 
     public List<Solicitation> getSolicitations() {
         return this.solicitations;

@@ -2,6 +2,7 @@
 package com.project.ChemistryStockControl.model;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,58 +18,51 @@ public class Solicitation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codSolicitacao;
 
-    private String matriculaSolicitante;
-
-    // private Sector sector;
-
     @ManyToOne
-    private Requester requester;
+    private User requester;
 
     @ManyToMany
     private List<Material> materials;
 
-    private Date dataSolicitacao;
+    private LocalDate dataSolicitacao;
+
+    private LocalDate dataDevolucao;
 
     public Solicitation() {
 
     }
 
-    public Solicitation(String matriculaSolicitante, Sector setor, Date dataSolicitacao) {
+    public Solicitation(LocalDate dataDevolucao) {
         super();
-        this.matriculaSolicitante = matriculaSolicitante;
-        // this.setor = setor;
-        this.dataSolicitacao = dataSolicitacao;
+        this.dataSolicitacao = LocalDate.now();
+        this.dataDevolucao = dataDevolucao;
     }
 
     public Long getCodSolicitacao() {
         return this.codSolicitacao;
     }
 
-    public void setCodSolicitacao(Long codSolicitacao) {
-        this.codSolicitacao = codSolicitacao;
+    public LocalDate getDataDevolucao() {
+        return this.dataDevolucao;
     }
 
-    public String getMatriculaSolicitante() {
-        return this.matriculaSolicitante;
-    }
-
-    public void setMatriculaSolicitante(String matriculaSolicitante) {
-        this.matriculaSolicitante = matriculaSolicitante;
-    }
-
-    public Date getDataSolicitacao() {
+    public LocalDate getDataSolicitacao() {
         return this.dataSolicitacao;
     }
 
-    public void setDataSolicitacao(Date dataSolicitacao) {
+    public void setDataSolicitacao(LocalDate dataSolicitacao) {
         this.dataSolicitacao = dataSolicitacao;
     }
 
-    public Requester getRequester() {
+    public void setDataDevolucao(LocalDate dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
+    }
+
+    public User getRequester() {
         return this.requester;
     }
 
-    public void setRequester(Requester requester) {
+    public void setRequester(User requester) {
         this.requester = requester;
     }
 
@@ -79,5 +73,4 @@ public class Solicitation {
     public void setMaterials(List<Material> materials) {
         this.materials = materials;
     }
-
 }

@@ -1,74 +1,73 @@
+// package com.project.ChemistryStockControl.model;
 
-package com.project.ChemistryStockControl.model;
+// import java.util.List;
 
-import java.util.List;
+// import javax.persistence.CascadeType;
+// import javax.persistence.Entity;
+// import javax.persistence.GeneratedValue;
+// import javax.persistence.GenerationType;
+// import javax.persistence.Id;
+// import javax.persistence.OneToMany;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+// @Entity
+// public class Sector {
 
-@Entity
-public class Sector {
+//     @Id
+//     @GeneratedValue(strategy = GenerationType.IDENTITY)
+//     private long codSector;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codSector;
+//     // adicionar variável nome para setor
+//     // private String nomeSetor;
+//     private int qtdEstoque;
 
-    // adicionar variável nome para setor
-    // private String nomeSetor;
-    private int qtdEstoque;
+//     @OneToMany(mappedBy = "sector", cascade = CascadeType.ALL)
+//     private List<Material> material;
 
-    @OneToMany(mappedBy = "sector", cascade = CascadeType.ALL)
-    private List<Material> material;
+//     @OneToMany(mappedBy = "setor", cascade = CascadeType.ALL)
+//     private List<User> users;
 
-    @OneToMany(mappedBy = "setor", cascade = CascadeType.ALL)
-    private List<User> users;
+//     public Sector() {
+//     }
 
-    public Sector() {
-    }
+//     public Sector(int qtdEstoque) {
+//         super();
+//         this.qtdEstoque = qtdEstoque;
+//     }
 
-    public Sector(int qtdEstoque) {
-        super();
-        this.qtdEstoque = qtdEstoque;
-    }
+//     public long getCodSector() {
+//         return this.codSector;
+//     }
 
-    public long getCodSector() {
-        return this.codSector;
-    }
+//     public void setCodSector(long codSector) {
+//         this.codSector = codSector;
+//     }
 
-    public void setCodSector(long codSector) {
-        this.codSector = codSector;
-    }
+//     public int getQtdEstoque() {
+//         return this.qtdEstoque;
+//     }
 
-    public int getQtdEstoque() {
-        return this.qtdEstoque;
-    }
+//     public void setQtdEstoque(int qtdEstoque) {
+//         this.qtdEstoque = qtdEstoque;
+//     }
 
-    public void setQtdEstoque(int qtdEstoque) {
-        this.qtdEstoque = qtdEstoque;
-    }
+//     public void gerarRelatorio() {
 
-    public void gerarRelatorio() {
+//     }
 
-    }
+//     public List<Material> getMaterial() {
+//         return this.material;
+//     }
 
-    public List<Material> getMaterial() {
-        return this.material;
-    }
+//     public void setMaterial(List<Material> material) {
+//         this.material = material;
+//     }
 
-    public void setMaterial(List<Material> material) {
-        this.material = material;
-    }
+//     public List<User> getUsers() {
+//         return this.users;
+//     }
 
-    public List<User> getUsers() {
-        return this.users;
-    }
+//     public void setUsers(List<User> users) {
+//         this.users = users;
+//     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
-
-}
+// }
