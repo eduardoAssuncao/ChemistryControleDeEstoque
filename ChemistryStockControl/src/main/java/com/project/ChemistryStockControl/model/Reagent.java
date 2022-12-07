@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 @DiscriminatorValue(value = "Reagente")
 public class Reagent extends Material {
 
+    @Column(name = "codigo")
     private String codigo;
 
     @Column(name = "validity")
@@ -31,13 +32,22 @@ public class Reagent extends Material {
 
     }
 
-    public Reagent(Date validity, boolean controlled, int qtdLeft, String unidade, String finalidade) {
+    public Reagent(String codigo, Date validity, boolean controlled, int qtdLeft, String unidade, String finalidade) {
         super();
+        this.codigo = codigo;
         this.validity = validity;
         this.controlled = controlled;
         this.quantLeft = qtdLeft;
         this.unidade = unidade;
         this.finalidade = finalidade;
+    }
+
+    public String getCodigo() {
+        return this.codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public Date getValidity() {
