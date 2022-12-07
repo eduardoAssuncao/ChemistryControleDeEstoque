@@ -176,12 +176,12 @@
 
       <form id="form" class="form-vertical  js-form-loading ms-2">
         <div class="form-group">
-          <input id="nomeReagente" type="text" class="form-control" />
           <label for="input-produto-nome">Nome do Reagente</label>
+          <input id="nomeReagente" type="text" class="form-control" />
         </div>
         <div class="form-group">
-          <input id="brand" type="text" class="form-control" />
           <label for="input-marca-reagente">Marca</label>
+          <input id="brand" type="text" class="form-control" />
         </div>
         <div class="form-group">
           <label for="input-produto-caracteristica">Características</label>
@@ -221,37 +221,47 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="form-group">
-              <label for="input-setor">Setor</label>
-              <select class="form-select" id="setor" aria-label="select">
+              <label for="input-reag-finalidade">Finalidade</label>
+              <select class="form-select" aria-label="select" required>
                 <option selected>Selecione</option>
-                <option value="1">GPPMI</option>
-                <option value="2">DAQ</option>
-                <option value="3">Grupo BIOMASSA</option>
-                <option value="4">Lab4</option>
-                <option value="5">Lab5</option>
-                <option value="6">Lab9</option>
-                <option value="7">Lab10</option>
+                <option value="fnPesquisa">Pesquisa</option>
+                <option value="fnEnsino">Ensino</option>
               </select>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="from-group pb-4 col-sm-4">
+            <label for="inputState">Localização</label>
+            <select id="inputSetor" class="form-select">
+              <option selected>Selecione o setor</option>
+              <option value="1">GPPMI</option>
+              <option value="2">DAQ</option>
+              <option value="3">Grupo BIOMASSA</option>
+              <option value="4">Lab4</option>
+              <option value="5">Lab5</option>
+              <option value="6">Lab9</option>
+              <option value="7">Lab10</option>
+            </select>
+          </div>
+          <div class="col-sm-4">
             <div class="form-group">
               <label for="input-produto-estoque">Estoque</label>
               <input id="quantity" type="number" class="form-control" placeholder="Unidades" />
             </div>
           </div>
         </div>
-        <div class="d-flex my-3 justify-content-md-end">
-          <div class="d-grid gap-3 d-md-flex">
-
-            <button id="enviar" class="btn btn-primary me-md-2" type="submit"> Enviar</button>
-
-            <a href="./cadastroReagente.html" class="btn  btn-danger me-md-2">Cancelar</a>
-
-            <a href="#" class="btn  btn-link  aw-btn-link-danger" onclick="excluir()">Excluir este
+        <!-- butoes -->
+        <div class="d-flex my-3 justify-content-end">
+          <div class="d-grid gap-3 d-md-flex"> <a href="#" class="btn  btn-link  aw-btn-link-danger"
+              onclick="excluir()">Excluir este
               produto</a>
+          </div>
+          <div class="d-grid gap-3 d-md-flex me-2">
+            <a href="./cadastroReagente.html" class="btn  btn-danger me-md-2">Cancelar</a>
+          </div>
+          <div class="d-grid gap-3 d-md-flex">
+            <button class="btn btn-primary me-md-2" type="submit">Enviar</button>
           </div>
         </div>
 

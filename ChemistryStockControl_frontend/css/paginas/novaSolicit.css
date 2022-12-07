@@ -1,0 +1,4 @@
+.form-group>.input-group>.selectpicker{
+    min-width: 2rem;
+    max-width: 2.5rem;
+}

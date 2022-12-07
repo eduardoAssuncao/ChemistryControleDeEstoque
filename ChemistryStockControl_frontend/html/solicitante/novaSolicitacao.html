@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/paginas/dashboard.css">
     <link rel="stylesheet" href="../../css/paginas/busca.css">
+    <link rel="stylesheet" href="../../css/paginas/novaSolicit.css">
     <title>CHEMISTRY Controle de Estoque </title>
 
     <link rel="icon" href="../../img/chemistry - icon.svg" />
@@ -26,10 +27,6 @@
             <a href="../../html/solicitante/index2.html" class="navbar-brand">
                 <img id="logo" src="../../img/chemistry - logo.png" alt="Chemistry" class="align-middle">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
-                aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="row">
                 <div class="d-flex col me-3 justify-content-end">
                     <ul class="navbar-nav">
@@ -51,7 +48,7 @@
                 <div class="d-flex col me-3 justify-content-end me-0">
                     <button type="button" class="btn btn-sair"><i class="bi bi-box-arrow-right"></i></button>
                 </div>
-            </div>
+            </div> 
         </div>
     </nav>
 
@@ -100,7 +97,7 @@
                                 <li>
                                     <a href="../../html/solicitante/novaSolicitacao.html" class="nav-link px-3 active">
                                         <span class="me-2"><i class="bi bi-clipboard-check"></i></span>
-                                        <span>Criar Solicitação</span>
+                                        <span>Nova Solicitação</span>
                                     </a>
                                 </li>
                             </ul>
@@ -133,6 +130,80 @@
                     </form>
                 </div>
                 <div class=" m-4 dropdown-divider"></div>
+                <form>
+                    <div class="row">
+                        <div class="col-md-8 form-group">
+                            <label for="input-solic-material">Nome</label>
+                            <input id="inputMat" type="text" class="form-control"/>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="input-estoque">Estoque</label>
+                              <input id="input-estoque" type="text" class="form-control"/>
+                            </div>
+                          </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-3 form-group">
+                            <label for="input-solic-finalidade">Finalidade</label>
+                            <select class="form-select" aria-label="select" required>
+                                <option selected>Selecione</option>
+                                <option value="fnPesquisa">Pesquisa</option>
+                                <option value="fnEnsino">Ensino</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-4">
+                            <div class="form-group">
+                                <label for="input-quant-retirada">Quantidade</label>
+                                <div class="input-group">
+                                    <input id="input-quant-retirada" type="number" class="form-control"
+                                        placeholder="Informe a quantidade" />
+                                    <select class="selectpicker form-control selectUnidade" data-live-search="true">
+                                        <option value="reagente">g</option>
+                                        <option value="vidraria">ml</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4">
+                            <label for="date" class="">Data da Retirada</label>
+                            <div class="input-group date" id="dataRetirada">
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4">
+                            <label for="date" class="">Data da Devolução</label>
+                            <div class="input-group date" id="dataDevolucao">
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-group">
+                                <label for="text-solicit-just">Justificativa</label>
+                                <textarea id="text-solicit-just" rows="3" class="form-control"
+                                    placeholder="Descreva a justificativa da solicitação do material"></textarea>
+                            </div>
+                        </div>
+                        <!-- somente para os reagentes -->
+                        <div class="row">
+                            <div class="col form-group">
+                                <label for="text-solicit-residuos">Destino dos Resíduos</label>
+                                <textarea id="text-solicit-residuos" rows="3" class="form-control"
+                                    placeholder="Descreva a justificativa da solicitação do material"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Botoes-->
+                    <div class="d-flex my-3 justify-content-end">
+                        <div class="d-grid gap-3 d-md-flex me-2">
+                            <a href="../../html/solicitante/novaSolicitacao.html" class="btn  btn-secondary me-md-2">Limpar</a>
+                        </div>
+                        <div class="d-grid gap-3 d-md-flex">
+                            <button class="btn btn-primary me-md-2" type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
