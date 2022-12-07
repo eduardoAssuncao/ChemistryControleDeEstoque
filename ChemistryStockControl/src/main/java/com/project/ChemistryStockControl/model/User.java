@@ -1,16 +1,19 @@
 package com.project.ChemistryStockControl.model;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo", length = 50, discriminatorType = DiscriminatorType.STRING)
 public class User {
 
     @Id
@@ -26,19 +29,15 @@ public class User {
     @Column(name = "senha")
     private String senha;
 
-    @ManyToOne
-    private Sector setor;
-
     public User() {
     }
 
-    public User(String matricula, String name, String email, String senha, Sector setor) {
+    public User(String matricula, String name, String email, String senha) {
         super();
         this.matricula = matricula;
         this.name = name;
         this.email = email;
         this.senha = senha;
-        this.setor = setor;
     }
 
     public String getMatricula() {
