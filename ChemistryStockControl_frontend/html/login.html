@@ -19,7 +19,7 @@
 
     <main class="form-signin w-100 m-auto">
         <img class="mb-4" src="../img/chemistry - logo.png" alt="logo chemistry" width="300" height="70">
-        <form>
+        <form id="form">
             <h1 class="h3 mb-3 fw-bold">Login</h1>
 
             <div class="form-floating">
@@ -27,14 +27,15 @@
                 <label for="floatingInput">Matrícula</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                <input type="password" class="form-control" name="senha" id="floatingPassword" placeholder="Password"
+                    required>
                 <label for="floatingPassword">Senha</label>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="form-group d-flex justify-content-end">
                         <div class="pt-2">
-                            <a  id="link" href="resetSenha.html">Esqueceu a senha?</a>
+                            <a id="link" href="resetSenha.html">Esqueceu a senha?</a>
                         </div>
                     </div>
                 </div>
@@ -43,13 +44,17 @@
             <div class="checkbox mb-3">
                 <label>
                     <input type="checkbox" value="lembrar-email"> Lembrar email
+                    <!-- Temos que tirar isso, não? -->
                 </label>
             </div>
-            <button class="w-100 btn btn-lg rounded-pill" type="submit">Entrar</button>
+            <button id="enviar" class="w-100 btn btn-lg rounded-pill" type="submit">Entrar</button>
             <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
         </form>
 
+        <table id="employees"></table>
+
     </main>
+    <script src="/ChemistryStockControl_frontend/js/frontend/validarUser.js"></script>
 </body>
 
 </html>
