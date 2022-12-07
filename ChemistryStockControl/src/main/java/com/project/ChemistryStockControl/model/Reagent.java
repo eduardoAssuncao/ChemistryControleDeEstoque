@@ -16,18 +16,24 @@ public class Reagent extends Material {
     @Column(name = "controlled")
     private boolean controlled;
 
-    @Column(name = "quantLeft")
+    @Column(name = "quantLeft") // quandidade restante do frasco
     private int quantLeft;
-    
+
+    @Column(name = "unidade")
+    private String unidade;
+
+    // private enum finalidade {Estudo, Pesquisa}; - inserir
+
     public Reagent() {
 
     }
 
-    public Reagent(Date validity, boolean controlled, int qtdLeft) {
+    public Reagent(Date validity, boolean controlled, int qtdLeft, String unidade) {
         super();
         this.validity = validity;
         this.controlled = controlled;
         this.quantLeft = qtdLeft;
+        this.unidade = unidade;
     }
 
     public Date getValidity() {

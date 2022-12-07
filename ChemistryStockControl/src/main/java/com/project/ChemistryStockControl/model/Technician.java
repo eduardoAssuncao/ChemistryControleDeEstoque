@@ -20,4 +20,5 @@ public class Technician extends User {
     public void atualizarEstoque() {
 
     }
+
 }

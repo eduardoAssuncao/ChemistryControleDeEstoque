@@ -18,14 +18,15 @@ function saveReagente(){
         method: "POST",
         body: JSON.stringify({
             name: inome.value,
-            brand: imarca.value,
+            //brand: imarca.value, - remover
             particulars: iparticulars.value,
             validity: ival.value,
             quantity: iqdtLeft.value,
             quantLeft: iestoque.value
-            //sector: isetor.options[isetor.selectedIndex].value,
-            //unidade: iunidade.value, -> pegar informação da unidade (ml, g) e adicinar essa informação no backend
-            //estoque: iestoque.value
+            //Inserir se o reagente é controlado ou não
+            //Inserir codigo de reagente
+            //sector: isetor.options[isetor.selectedIndex].value, - inserir
+            //unidade: iunidade.value, -> pegar informação da unidade (ml, g) e adicinar essa informação no backend - inserir
         })
     })
     .then(function(res) {console.log(res)})

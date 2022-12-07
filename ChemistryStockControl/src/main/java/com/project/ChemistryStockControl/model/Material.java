@@ -29,17 +29,17 @@ public class Material {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "brand")
-    private String brand;
+    // @Column(name = "brand") - remover
+    // private String brand;
 
     @Column(name = "particulars")
     private String particulars;
 
-    @Column(name = "quantity")
-    private int quantity;
+    // @Column(name = "quantity") - inserir
+    // private int quantity;
 
-    // @ManyToOne
-    // private Sector sector;
+    @ManyToOne
+    private Sector sector;
 
     @ManyToMany
     private List<Solicitation> solicitations;
@@ -47,12 +47,12 @@ public class Material {
     public Material() {
     }
 
-    public Material(String name, String brand, String particulars, int quantity) {
+    public Material(String name, String brand, String particulars) {
         super();
         this.name = name;
-        this.brand = brand;
+        // this.brand = brand;
         this.particulars = particulars;
-        this.quantity = quantity;
+        // this.quantity = quantity;
         // this.sector = sector;
     }
 
@@ -72,21 +72,21 @@ public class Material {
         this.name = name;
     }
 
-    public String getBrand() {
-        return this.brand;
-    }
+    // public String getBrand() {
+    // return this.brand;
+    // }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
+    // public void setBrand(String brand) {
+    // this.brand = brand;
+    // }
 
-    public int getQuantity() {
-        return this.quantity;
-    }
+    // public int getQuantity() {
+    // return this.quantity;
+    // }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+    // public void setQuantity(int quantity) {
+    // this.quantity = quantity;
+    // }
 
     public String getParticulars() {
         return this.particulars;
@@ -97,11 +97,11 @@ public class Material {
     }
 
     // public Sector getSector() {
-    //     return this.sector;
+    // return this.sector;
     // }
 
     // public void setSector(Sector sector) {
-    //     this.sector = sector;
+    // this.sector = sector;
     // }
 
     public List<Solicitation> getSolicitations() {

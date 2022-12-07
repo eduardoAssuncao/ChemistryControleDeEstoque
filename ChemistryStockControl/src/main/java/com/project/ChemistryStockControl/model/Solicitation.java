@@ -28,6 +28,8 @@ public class Solicitation {
 
     private LocalDate dataDevolucao;
 
+    // private boolean devolvido; - inserir
+
     public Solicitation() {
 
     }

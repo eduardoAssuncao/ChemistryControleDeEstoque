@@ -19,7 +19,7 @@ function saveUserTeacher(){
             matricula: imat.value,
             email: iemail.value,
             senha: isenha.value
-            //setor: isetor.value
+            //setor: isetor.value - remover
         })
     })
     .then(function(res) {console.log(res)})
@@ -38,7 +38,7 @@ function saveUserReseacher(){
         matricula: imat.value,
         email: iemail.value,
         senha: isenha.value
-        //setor: isetor.value
+        //setor: isetor.value - remover
     })
 })
 .then(function(res) {console.log(res)})
