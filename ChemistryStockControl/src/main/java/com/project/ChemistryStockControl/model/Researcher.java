@@ -1,8 +1,12 @@
 package com.project.ChemistryStockControl.model;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-public class Researcher extends Requester {
-
+@DiscriminatorValue(value = "Researcher")
+public class Researcher extends User {
+    public Researcher() {
+        super();
+    }
 }

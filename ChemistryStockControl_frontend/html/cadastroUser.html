@@ -29,46 +29,20 @@
                 <input type="text" class="form-control nome" id="floatingName" placeholder="Nome">
                 <label for="floatingName">Nome</label>
             </div>
-            <div class="form-floating pb-2">
-                <input type="text" class="form-control" id="floatingSurName" placeholder="Sobrenome">
-
-                <label for="floatingName">Sobrenome</label>
-            </div>
 
             <li class="my-3">
-                <hr class="dropdown-divider bg-light" />
+                <hr class="dropdown-divider bg-light"/>
             </li>
 
-            <div class="row row-cols-2">
+            <div id ="tipo" class="row row-cols-2">
                 <div class="col mb-2">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Professor(a)
-                        </label>
-                    </div>
+                    <input class="form-check-input" type="radio" name="type" id = 'Teacher' value= "Teacher"> Professor(a)
                 </div>
-                <div class="col  mb-2">
-                    <div class="col form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            Pesquisador(a)
-                        </label>
-                    </div>
+                <div class="col mb-2">
+                    <input class="form-check-input" type="radio" name="type" id = 'Researcher' value="Researcher"> Pesquisador(a)
                 </div>
             </div>
-            <div class="pb-2">
-                <select class="form-select" id="setor" name="sector" aria-label="Default select example">
-                    <option selected>Selecione seu setor</option>
-                    <option value="1">GPPMI</option>
-                    <option value="2">DAQ</option>
-                    <option value="3">Grupo BIOMASSA</option>
-                    <option value="4">Lab4</option>
-                    <option value="5">Lab5</option>
-                    <option value="6">Lab9</option>
-                    <option value="7">Lab10</option>
-                </select>
-            </div>
+            
             <div class="form-floating pb-2">
                 <input type="text" class="form-control" id="floatingMat" placeholder="Matrícula">
                 <label for="floatingMat">Matrícula</label>
