@@ -3,11 +3,13 @@ package com.project.ChemistryStockControl.model;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Sector {
@@ -16,28 +18,22 @@ public class Sector {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codSector;
 
-    // adicionar variável nome para setor
-    // private String nomeSetor; - inserir
+    @Column(name = "nomeSetor")
+    private String nomeSetor;
 
-    // OneToOne
-    // private List<User> responsavel; - inserir
-
-    // private int qtdEstoque; - remover
+    @OneToOne
+    private User responsavel;
 
     @OneToMany(mappedBy = "sector", cascade = CascadeType.ALL)
     private List<Material> material;
 
-    /*
-     * @OneToMany(mappedBy = "setor", cascade = CascadeType.ALL)
-     * private List<User> users;
-     */
-
     public Sector() {
     }
 
-    public Sector(int qtdEstoque) {
+    public Sector(String nomeSetor, User reponsavel) {
         super();
-        // this.qtdEstoque = qtdEstoque;
+        this.nomeSetor = nomeSetor;
+        this.responsavel = reponsavel;
     }
 
     public long getCodSector() {
@@ -48,18 +44,6 @@ public class Sector {
         this.codSector = codSector;
     }
 
-    // public int getQtdEstoque() {
-    // return this.qtdEstoque;
-    // }
-
-    // public void setQtdEstoque(int qtdEstoque) {
-    // this.qtdEstoque = qtdEstoque;
-    // }
-
-    public void gerarRelatorio() {
-
-    }
-
     public List<Material> getMaterial() {
         return this.material;
     }
@@ -68,12 +52,23 @@ public class Sector {
         this.material = material;
     }
 
-    // public List<User> getUsers() {
-    // return this.users;
-    // }
+    public String getNomeSetor() {
+        return this.nomeSetor;
+    }
 
-    // public void setUsers(List<User> users) {
-    // this.users = users;
-    // }
+    public void setNomeSetor(String nomeSetor) {
+        this.nomeSetor = nomeSetor;
+    }
 
+    public User getResponsavel() {
+        return this.responsavel;
+    }
+
+    public void setResponsavel(User responsavel) {
+        this.responsavel = responsavel;
+    }
+
+    public void gerarRelatorio() {
+
+    }
 }

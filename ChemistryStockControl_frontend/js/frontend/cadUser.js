@@ -4,7 +4,6 @@ const imat = document.querySelector("#floatingMat")
 const itipo = document.getElementsByName('type')
 const iemail = document.querySelector("#floatingInput")
 const isenha = document.querySelector("#floatingPassword")
-//const isetor = document.querySelector("#setor")
 
 function saveUserTeacher(){
     fetch("http://localhost:8080/api/v1/teachers",
@@ -19,7 +18,6 @@ function saveUserTeacher(){
             matricula: imat.value,
             email: iemail.value,
             senha: isenha.value
-            //setor: isetor.value - remover
         })
     })
     .then(function(res) {console.log(res)})
@@ -38,7 +36,6 @@ function saveUserReseacher(){
         matricula: imat.value,
         email: iemail.value,
         senha: isenha.value
-        //setor: isetor.value - remover
     })
 })
 .then(function(res) {console.log(res)})

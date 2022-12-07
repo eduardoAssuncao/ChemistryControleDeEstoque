@@ -1,12 +1,13 @@
 const formReagente = document.querySelector("#form")
 const inome = document.querySelector("#nomeReagente")
-const imarca = document.querySelector("#brand")
 const ival = document.querySelector("#validity")
 const iqdtLeft = document.querySelector("#qtdLeft")
 const isetor = document.querySelector("#setor")
 const iestoque = document.querySelector("#quantity")
 const iparticulars = document.querySelector("#particulars")
-//const iunidade = document.querySelector("#unidade")
+const iunidade = document.querySelector("#unidade")
+//const icontrolado = document.querySelector("#controlado") -> valor boolean
+//const icodigo = document.querySelector("#codigo")
 
 function saveReagente(){
     fetch("http://localhost:8080/api/v1/reagents",
@@ -18,15 +19,14 @@ function saveReagente(){
         method: "POST",
         body: JSON.stringify({
             name: inome.value,
-            //brand: imarca.value, - remover
             particulars: iparticulars.value,
             validity: ival.value,
             quantity: iqdtLeft.value,
-            quantLeft: iestoque.value
-            //Inserir se o reagente é controlado ou não
-            //Inserir codigo de reagente
-            //sector: isetor.options[isetor.selectedIndex].value, - inserir
-            //unidade: iunidade.value, -> pegar informação da unidade (ml, g) e adicinar essa informação no backend - inserir
+            quantLeft: iestoque.value,
+            //controlled: icontrolado.value, ->Inserir se o reagente é controlado ou não
+            //codigo: icodigo.value, ->Inserir codigo de reagente,
+            sector: isetor.options[isetor.selectedIndex].value,
+            unidade: iunidade.value
         })
     })
     .then(function(res) {console.log(res)})
