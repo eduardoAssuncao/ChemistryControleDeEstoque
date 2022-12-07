@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 @DiscriminatorValue(value = "Reagente")
 public class Reagent extends Material {
 
+    private String codigo;
+
     @Column(name = "validity")
     private Date validity;
 
@@ -22,18 +24,20 @@ public class Reagent extends Material {
     @Column(name = "unidade")
     private String unidade;
 
-    // private enum finalidade {Estudo, Pesquisa}; - inserir
+    @Column(name = "finalidade")
+    private String finalidade; // {Estudo, Pesquisa}
 
     public Reagent() {
 
     }
 
-    public Reagent(Date validity, boolean controlled, int qtdLeft, String unidade) {
+    public Reagent(Date validity, boolean controlled, int qtdLeft, String unidade, String finalidade) {
         super();
         this.validity = validity;
         this.controlled = controlled;
         this.quantLeft = qtdLeft;
         this.unidade = unidade;
+        this.finalidade = finalidade;
     }
 
     public Date getValidity() {
@@ -54,6 +58,30 @@ public class Reagent extends Material {
 
     public void setControlled(boolean controlled) {
         this.controlled = controlled;
+    }
+
+    public int getQuantLeft() {
+        return this.quantLeft;
+    }
+
+    public void setQuantLeft(int quantLeft) {
+        this.quantLeft = quantLeft;
+    }
+
+    public String getUnidade() {
+        return this.unidade;
+    }
+
+    public void setUnidade(String unidade) {
+        this.unidade = unidade;
+    }
+
+    public String getFinalidade() {
+        return this.finalidade;
+    }
+
+    public void setFinalidade(String finalidade) {
+        this.finalidade = finalidade;
     }
 
 }

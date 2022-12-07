@@ -1,7 +1,6 @@
 
 package com.project.ChemistryStockControl.model;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 import javax.persistence.Entity;
@@ -28,16 +27,17 @@ public class Solicitation {
 
     private LocalDate dataDevolucao;
 
-    // private boolean devolvido; - inserir
+    private boolean devolvido = false;
 
     public Solicitation() {
 
     }
 
-    public Solicitation(LocalDate dataDevolucao) {
+    public Solicitation(LocalDate dataSolicitacao, LocalDate dataDevolucao, Boolean devolvido) {
         super();
         this.dataSolicitacao = LocalDate.now();
         this.dataDevolucao = dataDevolucao;
+        this.devolvido = devolvido;
     }
 
     public Long getCodSolicitacao() {
@@ -75,4 +75,21 @@ public class Solicitation {
     public void setMaterials(List<Material> materials) {
         this.materials = materials;
     }
+
+    public void setCodSolicitacao(Long codSolicitacao) {
+        this.codSolicitacao = codSolicitacao;
+    }
+
+    public boolean isDevolvido() {
+        return this.devolvido;
+    }
+
+    public boolean getDevolvido() {
+        return this.devolvido;
+    }
+
+    public void setDevolvido(boolean devolvido) {
+        this.devolvido = devolvido;
+    }
+
 }
