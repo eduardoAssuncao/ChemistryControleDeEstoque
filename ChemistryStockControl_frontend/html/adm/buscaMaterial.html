@@ -178,14 +178,15 @@
             </div>
             <div class="container-pesquisa">
                 <form class="input-group">
-                    <input id="inputMat" type="text" class="form-control" placeholder="Pesquisar por" />
+                    <input id="inputMat" type="text" class="form-control" placeholder="Pesquisar..." />
                     <select id="selectMaterial" class="selectpicker form-control" data-live-search="true">
                         <option value="reagente">Reagente</option>
                         <option value="vidraria">Vidraria</option>
                     </select>
-                    <button id="btnBuscaMat" class="btn btn-verde" type="button"><i class="bi bi-search"></i></button>
+                    <button id="btnBuscaMat" class="btn btn-verde" type="submit"><i class="bi bi-search"></i></button>
                 </form>
             </div>
+
             <div class=" m-4 dropdown-divider"></div>
 
             <div class="col">
@@ -199,42 +200,7 @@
                             </svg></span>Reagentes Cadastrados
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-striped custom-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Cód.</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Marca</th>
-                                    <th scope="col">Unidades</th>
-                                    <th scope="col">Quantidade</th>
-                                    <th scope="col">Validade</th>
-                                    <th scope="col">Setor</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr scope="row">
-                                    <td>0001</td>
-                                    <td><a href="#">ÁCIDO ACÉTICO GLACIAL</a></td>
-                                    <td>QUIMEX</td>
-                                    <td>1</td>
-                                    <td>1000 ml</td>
-                                    <td>16/12/2024</td>
-                                    <td>GPPMI</td>
-                                    <td><a href="#" class="more">Detalhes</a></td>
-                                </tr>
-                                <tr>
-                                    <td>0002</td>
-                                    <td><a href="#">HIDRÓXIDO DE SÓDIO</a></td>
-                                    <td>EMSURE</td>
-                                    <td>1</td>
-                                    <td>100 g</td>
-                                    <td>17/08/2023</td>
-                                    <td>NEA</td>
-                                    <td><a href="#" class="more">Detalhes</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <table id="reagentes" class="table table-striped custom-table"></table>
                     </div>
                 </div>
             </div>
@@ -244,30 +210,7 @@
                         <span><i class="bi bi-save m-2"></i></span>Vidrarias Cadastradas
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-striped custom-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Cód.</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Marca</th>
-                                    <th scope="col">Unidades</th>
-                                    <th scope="col">Capacidade</th>
-                                    <th scope="col">Setor</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr scope="row">
-                                    <td>0001</td>
-                                    <td><a href="#">BECKER DE VIDRO GRADUADO FORMA BAIXA</a></td>
-                                    <td>MYLABOR</td>
-                                    <td>1</td>
-                                    <td>500 ml</td>
-                                    <td>GPPMI</td>
-                                    <td><a href="#" class="more">Detalhes</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <table id="vidrarias" class="table table-striped custom-table"></table>
                     </div>
                 </div>
             </div>
@@ -277,7 +220,8 @@
     <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
     <script src="../../js/popper.min.js"></script>
-    <script src="../../js/main.js"></script>
+    <script src="../../js/frontend/tabelaReagente.js"></script>
+    <script src="../../js/frontend/tabelaVidraria.js"></script>
 </body>
 
 </html>

@@ -1,13 +1,13 @@
 const formReagente = document.querySelector("#form")
 const inome = document.querySelector("#nomeReagente")
+const icodigo = document.querySelector('#codigo')
 const ival = document.querySelector("#validity")
 const iqdtLeft = document.querySelector("#qtdLeft")
-const isetor = document.querySelector("#setor")
+//const isetor = document.querySelector("#inputSetor")
 const iestoque = document.querySelector("#quantity")
 const iparticulars = document.querySelector("#particulars")
 const iunidade = document.querySelector("#unidade")
-//const icontrolado = document.querySelector("#controlado") -> valor boolean
-//const icodigo = document.querySelector("#codigo")
+//const icontrolado = document.querySelector("#controlado")
 
 function saveReagente(){
     fetch("http://localhost:8080/api/v1/reagents",
@@ -23,9 +23,9 @@ function saveReagente(){
             validity: ival.value,
             quantity: iqdtLeft.value,
             quantLeft: iestoque.value,
-            //controlled: icontrolado.value, ->Inserir se o reagente é controlado ou não
-            //codigo: icodigo.value, ->Inserir codigo de reagente,
-            sector: isetor.options[isetor.selectedIndex].value,
+            //controlled: icontrolado.value,
+            codigo: icodigo.value,
+            //sector: isetor.options[isetor.selectedIndex].value,
             unidade: iunidade.value
         })
     })
