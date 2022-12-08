@@ -1,8 +1,10 @@
 
 package com.project.ChemistryStockControl.model;
 
-import java.time.LocalDate;
+import java.sql.Date;
+//import java.time.LocalDate;
 import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,55 +19,121 @@ public class Solicitation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codSolicitacao;
 
+    private String nome;
+
+    private int estoque;
+
+    private String finalidade;
+
+    private float quantidade;
+
+    private Date retirada;
+
+    private Date devolucao;
+
+    private String justificativa;
+
+    private String destino;
+
     @ManyToOne
-    private User requester;
+    private User user;
 
     @ManyToMany
     private List<Material> materials;
-
-    private LocalDate dataSolicitacao;
-
-    private LocalDate dataDevolucao;
-
-    private boolean devolvido = false;
 
     public Solicitation() {
 
     }
 
-    public Solicitation(LocalDate dataSolicitacao, LocalDate dataDevolucao, Boolean devolvido) {
+    public Solicitation(String nome, int estoque, String finalidade, float quantidade, Date retirada, Date devolucao,
+            String justificativa, String destino, User user, List<Material> materials) {
         super();
-        this.dataSolicitacao = LocalDate.now();
-        this.dataDevolucao = dataDevolucao;
-        this.devolvido = devolvido;
+        this.nome = nome;
+        this.estoque = estoque;
+        this.finalidade = finalidade;
+        this.quantidade = quantidade;
+        this.retirada = retirada;
+        this.devolucao = devolucao;
+        this.justificativa = justificativa;
+        this.destino = destino;
+        this.user = user;
+        this.materials = materials;
     }
 
     public Long getCodSolicitacao() {
         return this.codSolicitacao;
     }
 
-    public LocalDate getDataDevolucao() {
-        return this.dataDevolucao;
+    public String getNome() {
+        return this.nome;
     }
 
-    public LocalDate getDataSolicitacao() {
-        return this.dataSolicitacao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public void setDataSolicitacao(LocalDate dataSolicitacao) {
-        this.dataSolicitacao = dataSolicitacao;
+    public int getEstoque() {
+        return this.estoque;
     }
 
-    public void setDataDevolucao(LocalDate dataDevolucao) {
-        this.dataDevolucao = dataDevolucao;
+    public void setEstoque(int estoque) {
+        this.estoque = estoque;
     }
 
-    public User getRequester() {
-        return this.requester;
+    public String getFinalidade() {
+        return this.finalidade;
     }
 
-    public void setRequester(User requester) {
-        this.requester = requester;
+    public void setFinalidade(String finalidade) {
+        this.finalidade = finalidade;
+    }
+
+    public float getQuantidade() {
+        return this.quantidade;
+    }
+
+    public void setQuantidade(float quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public Date getRetirada() {
+        return this.retirada;
+    }
+
+    public void setRetirada(Date retirada) {
+        this.retirada = retirada;
+    }
+
+    public Date getDevolucao() {
+        return this.devolucao;
+    }
+
+    public void setDevolucao(Date devolucao) {
+        this.devolucao = devolucao;
+    }
+
+    public String getJustificativa() {
+        return this.justificativa;
+    }
+
+    public void setJustificativa(String justificativa) {
+        this.justificativa = justificativa;
+    }
+
+    public String getDestino() {
+        return this.destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+    public User getUser() {
+        return this.user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public List<Material> getMaterials() {
@@ -79,17 +147,4 @@ public class Solicitation {
     public void setCodSolicitacao(Long codSolicitacao) {
         this.codSolicitacao = codSolicitacao;
     }
-
-    public boolean isDevolvido() {
-        return this.devolvido;
-    }
-
-    public boolean getDevolvido() {
-        return this.devolvido;
-    }
-
-    public void setDevolvido(boolean devolvido) {
-        this.devolvido = devolvido;
-    }
-
 }

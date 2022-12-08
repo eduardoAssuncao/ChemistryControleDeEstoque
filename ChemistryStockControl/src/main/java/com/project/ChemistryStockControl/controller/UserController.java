@@ -45,7 +45,7 @@ public class UserController {
         return userRepository.save(user);
     }
 
-    // get user by id rest api
+    // get user by matricula rest api
     @GetMapping("/users/{matricula}")
     public ResponseEntity<User> getUserById(@PathVariable String matricula) { // change this for matricula
         User user = userRepository.findByMatricula(matricula)
