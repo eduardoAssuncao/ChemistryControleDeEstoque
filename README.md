@@ -54,7 +54,8 @@ As ferramentas utilizadas para o desenvolvimento incluem Java, que é uma lingua
 | 13/10/22 | 2.3 | Correção do Diagrama de Sequência do Caso de Uso 8. | Regiana |
 
 
-
+### Problema de negócio
+O sistema de gerenciamento de estoque do laboratório de química tem como objetivo permitir a administração dos devidos produtos (reagente e vidraria) de modo a permitir a adição, remoção e edição dos produtos, além de registar as solicitações feitas pelos professores e alunos pesquisadores aos produtos.
 
 ### Levantamento de requisitos  
 Os requisitos foram validados com o cliente e aprovados.
@@ -63,13 +64,27 @@ Os requisitos foram validados com o cliente e aprovados.
 Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 
 * **RF1** - Criar e manter três perfis de Usuário.
-* **RF2** - Cadastrar e manter materiais.
-* **RF4** - Atualizar estoque.
-* **RF5** - Realizar solicitação.
-* **RF6** - Visualizar solicitações.
-* **RF7** - Validar solicitações.
-* **RF8** - Emitir FISPQ.
-* **RF8** - Emitir Relatórios.
+* **RF2** - Criar e manter Usuários.
+* **RF3** - Cadastrar e manter Categorias.
+* **RF4** - Cadastrar e manter Setores.
+* **RF5** - Cadastrar e manter Materiais.
+* **RF6** - Atualizar Estoque.
+* **RF7** - Procurar Materiais.
+* **RF8** - Realizar Solicitação.
+* **RF9** - Visualizar Solicitações.
+* **RF10** - Validar Solicitações.
+* **RF11** - Emitir FISPQ.
+* **RF12** - Emitir Relatório Parcial e Geral.
+* **RF13** - Emitir Relatório para Polícia Federal.
+* **RF14** - Emitir Relatório para o Exército.
+* **RF15** - Emitir Relatório com listagem de Materias para reposição.
+
+### Requisitos Não Funcionais
+Respeitando a proposta, o sistema deverá atender os seguintes requisitos não funcionais:
+
+* **RNF1** - Estrutura Organizacional do Sistema.
+* **RNF2** - Desenvolvimento para Web.
+* **RNF3** - Utilizar Banco de Dados Sql.
 
 ## Regras de Negócio
 
