@@ -13,7 +13,7 @@ Repositório da aplicação Chemistry que servirá para o controle de estoque e 
 
 # Chemistry: controle de estoque
 
-<details><summary>+</summary>
+<details><summary>CHEMISTRY</summary>
 <p>
 
 ## Introdução
@@ -110,6 +110,7 @@ _Validade dos Reagentes_
 
 * **Caso de Uso 2** - Logar no Sistema
 ![Screenshot](Diagramas/logar_sistema.png)
+Esse revoltado não quer ficar no lugar dele
 
 * **Caso de Uso 3** - Criar e Manter Materiais
 ![Screenshot](Diagramas/criar_manter_materiais.png)
@@ -139,7 +140,19 @@ _Validade dos Reagentes_
 <p>
 
 ## Especificação de Casos de Uso
-
+* **Caso de Uso 4** - Procurar Materiais
+| Objetivo | --- | Permitir que o Técnico Principal, o Técnico Auxiliar, os Professores e Pesquisadores encontre os materiais a partir de um determinado tipo de pesquisa, seja por código de barra, por características ou nome, ao realizar a pesquisa pelo mesmo no sistema de Gerenciamento de Materiais. |
+| Requisitos | --- | Ter sido cadastrado como usuário correspondente um dos níveis de acesso que permitam tais ações de procura supracitadas. |
+| Atores | --- | Técnico Principal, Técnico Auxiliar, Professores e Pesquisadores. |
+| Prioridade | --- | Alta |
+| Pré-condições | --- | Os materiais devem ter sido cadastrados e armazenados no banco de dados anteriormente. |
+| Frequência de uso | --- | Frequente. |
+| Criticalidade | --- | Média. |
+| Fluxo Principal | --- | 1. O usuário deve realizar login.
+2. O usuário vai até o menu de busca e descreve a informação que deseja pesquisar.
+ |
+| Fluxo Alternativo | --- | 1. Ao estar no menu de busca, o usuário pode pesquisar utilizando o nome do material, seu código de barra ou uma característica própria. | 
+| Pós-condição | --- | 1. Após a pesquisa ter sido realizada, teremos uma lista com os materiais caracterizados pela pesquisa (o resultado pode ser diferente dependendo do tipo de pesquisa utilizada). |
 
 </p>
 </details>
