@@ -270,8 +270,50 @@ _Validade dos Reagentes_
 * **Cadastro Setor**
 ![Screenshot](Prints/cadastro_setor.png)
 
-* **d**
-![Screenshot]()
+* **Tela Inicial Administrador**
+![Screenshot](Prints/tela_inicial_adm.png)
+
+* **Tela Inicial Outros**
+![Screenshot](Prints/tela_inicial_others.png)
+
+* **Cadastro Usuários**
+![Screenshot](Prints/cadastro_usuario.png)
+
+* **Tela de Login**
+![Screenshot](Prints/login.png)
+
+* **Minhas Solicitações**
+![Screenshot](Prints/minha_solicitacao.png)
+
+* **Novas Solicitações**
+![Screenshot](Prints/nova_solicitacao_01.png)
+
+* **Novas Solicitações**
+![Screenshot](Prints/nova_solicitacao_02.png)
+
+* **Procurar Material**
+![Screenshot](Prints/procurar_material.png)
+
+* **Recuperar Senha**
+![Screenshot](Prints/recuperar_senha.png)
+
+* **Relatório Diário**
+![Screenshot](Prints/relatorio_diario.png)
+
+* **Relatório Exército**
+![Screenshot](Prints/relatorio_exercito.png)
+
+* **Relatório Mensal**
+![Screenshot](Prints/relatorio_mensal.png)
+
+* **Relatório Polícia Deferal**
+![Screenshot](Prints/relat%C3%B3rio_pf.png)
+
+* **Ver Reagente**
+![Screenshot](Prints/ver_reagente.png)
+
+* **Ver Solicitação**
+![Screenshot](Prints/ver_solicitacao.png)
 
 </p>
 </details>
