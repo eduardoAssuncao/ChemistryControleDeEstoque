@@ -141,23 +141,47 @@ Esse revoltado não quer ficar no lugar dele
 
 ## Especificação de Casos de Uso
 * **Caso de Uso 4** - Procurar Materiais
-| Objetivo | Requisitos| Atores | Prioridade | Pré-condições|
+
+| Objetivo | Requisitos| Atores | Prioridade | Pré-condições |
 | --- | --- | --- | --- | --- |
-| Permitir que o Técnico Principal, o Técnico Auxiliar, os Professores e Pesquisadores encontre os materiais a partir de um determinado tipo de pesquisa, seja por código de barra, por características ou nome, ao realizar a pesquisa pelo mesmo no sistema de Gerenciamento de Materiais. |
-| Ter sido cadastrado como usuário correspondente um dos níveis de acesso que permitam tais ações de procura supracitadas. |
-| Técnico Principal, Técnico Auxiliar, Professores e Pesquisadores. |
-| Alta |
-| Os materiais devem ter sido cadastrados e armazenados no banco de dados anteriormente. |
+| Permitir que o Técnico Principal, o Técnico Auxiliar, os Professores e Pesquisadores encontre os materiais a partir de um determinado tipo de pesquisa, seja por código de barra, por características ou nome, ao realizar a pesquisa pelo mesmo no sistema de Gerenciamento de Materiais. | Ter sido cadastrado como usuário correspondente um dos níveis de acesso que permitam tais ações de procura supracitadas. |Técnico Principal, Técnico Auxiliar, Professores e Pesquisadores. | Alta | Os materiais devem ter sido cadastrados e armazenados no banco de dados anteriormente. |
 
 | Frequência de Uso | Criticalidade | Fluxo Principal | Fluxo Alternativo | Pós-condição |
-| --- | --- | --- | --- | ---|
-| Frequente. |
-| Média. |
-| 1. O usuário deve realizar login.
-2. O usuário vai até o menu de busca e descreve a informação que deseja pesquisar.
- |
-| 1. Ao estar no menu de busca, o usuário pode pesquisar utilizando o nome do material, seu código de barra ou uma característica própria. | 
-| 1. Após a pesquisa ter sido realizada, teremos uma lista com os materiais caracterizados pela pesquisa (o resultado pode ser diferente dependendo do tipo de pesquisa utilizada). |
+| --- | --- | --- | --- | --- |
+| Frequente. | Média. | 1. O usuário deve realizar login.
+2. O usuário vai até o menu de busca e descreve a informação que deseja pesquisar. | 1. Ao estar no menu de busca, o usuário pode pesquisar utilizando o nome do material, seu código de barra ou uma característica própria. | 1. Após a pesquisa ter sido realizada, teremos uma lista com os materiais caracterizados pela pesquisa (o resultado pode ser diferente dependendo do tipo de pesquisa utilizada). |
+
+* **Caso de Uso 5** - Realizar Solicitação
+
+| Objetivo | Requisitos| Atores | Prioridade | Pré-condições |
+| --- | --- | --- | --- | --- |
+| Permitir que Professores e Pesquisadores solicitem o material necessário para uso. | Estar cadastrado como Usuário Solicitante e realizar a solicitação com até 48 horas de antecedência. |Professores e Pesquisadores. | Alta | Os materiais (reagentes e vidrarias) devem ter sido cadastrados e armazenados no banco de dados no setor correspondente à solicitação. |
+
+| Frequência de Uso | Fluxo Principal | Fluxo Alternativo | Pós-condição |
+| --- | --- | --- | --- | --- |
+| Frequente. | 1. Este caso de uso começa quando um Usuário Solicitante logado realiza uma solicitação de materiais no Sistema. 2. O Sistema verifica a disponibilidade dos materiais solicitados.
+3. Os materiais solicitados estão disponíveis para o Usuário Solicitante. 4. O Técnico valida a solicitação. 5. O Sistema confirma a solicitação e o Usuário pode fazer a retirada dos materiais solicitados. | 4. Um ou mais materiais solicitados não estão disponíveis. 5. O Sistema informa ao Usuário que a solicitação não foi confirmada. | O estoque de materiais do setor é atualizado no banco de dados. |
+
+* **Caso de Uso 6** - Vizualizar Solicitações
+
+| Objetivo | Requisitos| Atores | Prioridade | Pré-condições |
+| --- | --- | --- | --- | --- |
+| Permitir que o usuário visualize as solicitações, podendo realizar consultas que permitem verificar quais já foram realizadas, além de mostrar as pendentes de aprovação. | Deve haver materiais armazenados no banco de dados que já foram sujeitos previamente a solicitação. | Técnico Principal, Técnico Auxiliar, Professores e Pesquisadores. | Desejável | Ter feito login no sistema, e ser usuário correspondente ao nível de acesso que permite realizar tal ação. |
+
+| Frequência de Uso | Criticalidade | Fluxo Principal | Fluxo Alternativo | Pós-condição |
+| --- | --- | --- | --- | --- |
+| Alta. | Média. | 1. O usuário deve realizar login. 2. O sistema deverá iniciar a janela “Visualizar solicitações”, quando o usuário clicar no item “Pesquisar” do menu na aba de “Solicitações”.
+3. O sistema iniciará uma conexão com o banco de dados. 4. A exibição de dados pode ser feita de maneira geral ou por busca de solicitação específica. 5. O sistema precisará exibir os dados de todas as solicitações feitas. 6. Caso o usuário deseje buscar uma solicitação em específico, ele deverá informar a vidraria/reagente. 7. O sistema terá de buscar as solicitações associadas às informações requeridas. 8. O sistema então, deverá exibir os dados localizados. | 1. O sistema precisa manter a tela ativa independente do tempo que o usuário leva para informar os dados solicitados, se necessário. 2. Caso o sistema não conseguir realizar a procura pela solicitação deve informar na janela o erro gerado. 3. Ao realizar a busca de solicitações específicas e não encontrar a consulta, o sistema irá informar na janela que não conseguiu localizar as informações referentes à pesquisa escolhida e se possível, por meio de SQL Exceptions, informar o erro gerado. | 1. Após a busca pela solicitação ter sido realizada, o sistema retornará o resultado da consulta com os dados relativos a busca feita de forma detalhada, podendo ser visualizado o “status” de cada solicitação e demais informações necessárias. |
+
+* **Caso de Uso 8** - Emitir FISPQ
+
+| Objetivo | Requisitos| Atores | Prioridade | Pré-condições |
+| --- | --- | --- | --- | --- |
+| Permitir que o usuário tenha acesso ao arquivo em formato PDF (para visualização e download) da Ficha de Informação de Segurança para Produtos Químicos (FISPQ) para cada reagente cadastrado, através da pesquisa pelo mesmo no sistema de Gerenciamento de Materiais. | Ter sido cadastrado como usuário. | Técnico Principal, Técnico Auxiliar, Professores e Pesquisadores. | Alta | Os materiais devem ter sido cadastrados e armazenados no banco de dados anteriormente, junto com o arquivo PDF. |
+
+| Frequência de Uso | Criticalidade | Fluxo Principal | Fluxo Alternativo | Pós-condição |
+| --- | --- | --- | --- | --- |
+| Frequente. | Média. | 1. O usuário realiza o login, informando seus dados cadastrados anteriormente. 2. Na tela principal, clicar na opção Procurar Material e seguir os passos da especificação desse caso de uso. 3. Após encontrar o material solicitado, clicar na opção Emitir FISPQ, presente na tela de apresentação das informações do material pesquisado. 4. Será exibido a FISPQ do material e a opção Baixar. | 5. Caso a FISPQ do material pesquisado não esteja disponível no sistema, apresente uma mensagem de erro. 6. Envia mensagem de alerta ao Técnico Principal da ausência da FISPQ deste material. | Após clicar na opção de baixar FISPQ, o sistema irá abrir uma aba no navegador com o arquivo em formato PDF. O arquivo fica disponível para visualização e download. |
 
 </p>
 </details>
