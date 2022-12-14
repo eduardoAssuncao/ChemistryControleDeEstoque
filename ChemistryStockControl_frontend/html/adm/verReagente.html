@@ -18,43 +18,7 @@
 
 <body>
   <!-- Barra de navegação -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
-        aria-controls="offcanvasExample">
-        <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
-      </button>
-      <a href="../../adm/index.html" class="navbar-brand">
-        <img id="logo" src="../../img/chemistry - logo.png" alt="Chemistry" class="align-middle">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
-        aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="row">
-        <div class="d-flex col me-3 justify-content-end">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="bi bi-person-circle"></i>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Meu perfil</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="btn-danger dropdown-item" href="#">Configuração</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="d-flex col me-3 justify-content-end me-0">
-          <button type="button" class="btn btn-sair"><i class="bi bi-box-arrow-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <div include-html="../../html/componentes/navbar.html"></div>
 
   <!-- Menu offcanvas -->
   <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
@@ -104,10 +68,33 @@
               <span>Cadastrar Setor</span>
             </a>
           </li>
+          <li class="my-2">
+            <hr class="dropdown-divider bg-light" />
+          </li>
           <li>
-            <a href="../../html/adm/verSolicitacoes.html" class="nav-link px-3">
-              <span class="me-2"><i class="bi bi-clipboard"></i></span>
-              <span>Solicitações</span>
+              <a href="../../html/adm/verSolicitacoes.html" class="nav-link px-3">
+                  <span class="me-2"><i class="bi bi-clipboard"></i></span>
+                  <span>Solicitações</span>
+              </a>
+          </li>
+          <li class="my-2">
+            <hr class="dropdown-divider bg-light" />
+          </li>
+          <li>
+            <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+              operações
+            </div>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-box-arrow-in-down"></i></span>
+              <span>Entrada</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-box-arrow-down"></i></span>
+              <span>Saída</span>
             </a>
           </li>
           <li class="my-2">
@@ -173,80 +160,70 @@
         <div class="col-md-12">
           <div class="card card-body printableArea">
             <h3 id="nomeReagente"><b>ÁCIDO SULFÚRICO 95%</b></h3>
-            <hr />      
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="input-marca-reagente">Marca</label>
-                      <input id="input-marca-reagente" type="text" class="form-control" value="QUIMEX" readonly/>
-                    </div>
-                  </div>                  
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label for="input-setor">Setor</label>
-                      <select class="form-select" aria-label="select" aria-disabled="true">
-                        <option selected>Selecione</option>
-                        <option value="1">GPPMI</option>
-                        <option value="2">DAQ</option>
-                        <option value="3" selected>Grupo BIOMASSA</option>
-                        <option value="4">Lab4</option>
-                        <option value="5">Lab5</option>
-                        <option value="6">Lab9</option>
-                        <option value="7">Lab10</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <form>
-                      <label for="date" class="">Data de validade</label>
-                      <div class="input-group date" id="dataValid">
-                          <input type="date" class="form-control" value="2022-05-22">
-                      </div>
-                    </form>
-                  </div>
-                  
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label for="input-produto-caracteristica">Características</label>
-                      <textarea id="input-produto-caracteristica" rows="3" class="form-control" readonly></textarea>
-                    </div>
-                  </div>       
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label for="input-produto-qtd-frasco">Quatidade do Frasco</label>
-                      <input id="input-produto-qtd-frasco" type="text" class="form-control" value="2" readonly/>
-                    </div>
-                  </div> 
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label for="input-produto-estoque">Estoque</label>
-                      <input id="input-produto-estoque" type="number" class="form-control" value="20000" readonly/>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label for="input-unidade">Unidade</label>
-                      <select class="form-select" aria-label="select" aria-disabled="true">
-                        <option selected>Selecione</option>
-                        <option value="ml" selected>ml</option>
-                        <option value="g">g</option>
-                      </select>
-                    </div>
-                  </div>
+            <hr />
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="input-marca-reagente">Marca</label>
+                  <input id="input-marca-reagente" type="text" class="form-control" value="QUIMEX" readonly />
                 </div>
-                <div class="d-flex my-3 justify-content-md-end">
-                  <div class="d-grid gap-3 d-md-flex">
-                    <a href="#" class="btn  btn-link  aw-btn-link-danger" onclick="editarReagente()">Editar este
-                      reagente</a>
-                    <button id="btnExcluirReagente" class="btn btn-danger me-md-2" type="button">Excluir</button>
-                    <a href="../../html/adm/cadastroReagente.html" class="btn  btn-verde me-md-2">Voltar</a>
-                  </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-reag-finalidade">Finalidade</label>
+                  <select class="form-select" aria-label="select" readonly>
+                    <option>Selecione</option>
+                    <option selected value="fnPesquisa">Pesquisa</option>
+                    <option value="fnEnsino">Ensino</option>
+                  </select>
                 </div>
+              </div>
+              <div class="col-sm-4">
+                <form>
+                  <label for="date" class="">Data de validade</label>
+                  <div class="input-group date" id="dataValid">
+                    <input type="date" class="form-control" value="2022-05-22" readonly>
+                  </div>
+                </form>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="input-produto-caracteristica">Características</label>
+                  <textarea id="input-produto-caracteristica" rows="3" class="form-control" readonly></textarea>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-produto-qtd-frasco">Quatidade do Frasco</label>
+                  <input id="input-produto-qtd-frasco" type="text" class="form-control" value="2" readonly />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-produto-estoque">Estoque</label>
+                  <input id="input-produto-estoque" type="number" class="form-control" value="20000" readonly />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-unidade">Unidade</label>
+                  <select class="form-select" aria-label="select" aria-disabled="true">
+                    <option selected>Selecione</option>
+                    <option value="ml" selected>ml</option>
+                    <option value="g">g</option>
+                  </select>
+                </div>
+              </div>
             </div>
+            <div include-html="../../html/componentes/btn-editar-excluir.html"></div>
+          </div>
         </div>
       </div>
   </main>
   <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
+  <script src="../../js/frontend/includeHTML.js"></script>
+  <script>includeHTML()</script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
   <script src="../../js/frontend/main.js"></script>
 

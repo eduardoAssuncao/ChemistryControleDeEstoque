@@ -12,59 +12,13 @@
   <link rel="stylesheet" href="../../css/paginas/dashboard.css">
   <link rel="stylesheet" href="../../css/paginas/busca.css">
   <title>CHEMISTRY Controle de Estoque </title>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="../../css/style.min.css" />
-  <link rel="stylesheet" href="../../css/styles.css">
-  <link rel="stylesheet" href="../../css/paginas/dashboard.css">
-  <link rel="stylesheet" href="../../css/paginas/busca.css">
-  <title>CHEMISTRY Controle de Estoque </title>
 
-    <link rel="icon" href="../../img/chemistry - icon.svg" />
+  <link rel="icon" href="../../img/chemistry - icon.svg" />
 </head>
 
 <body>
   <!-- Barra de navegação -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
-        aria-controls="offcanvasExample">
-        <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
-      </button>
-      <a href="../../html/adm/index.html" class="navbar-brand">
-        <img id="logo" src="../../img/chemistry - logo.png" alt="Chemistry" class="align-middle">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
-        aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="row">
-        <div class="d-flex col me-3 justify-content-end">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="bi bi-person-circle"></i>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Meu perfil</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="btn-danger dropdown-item" href="#">Configuração</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="d-flex col me-3 justify-content-end me-0">
-          <button type="button" class="btn btn-sair"><i class="bi bi-box-arrow-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <div include-html="../../html/componentes/navbar.html"></div>
 
   <!-- Menu offcanvas -->
   <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
@@ -114,10 +68,33 @@
               <span>Cadastrar Setor</span>
             </a>
           </li>
+          <li class="my-2">
+            <hr class="dropdown-divider bg-light" />
+          </li>
           <li>
             <a href="../../html/adm/verSolicitacoes.html" class="nav-link px-3">
               <span class="me-2"><i class="bi bi-clipboard"></i></span>
               <span>Solicitações</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <hr class="dropdown-divider bg-light" />
+          </li>
+          <li>
+            <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+              operações
+            </div>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-box-arrow-in-down"></i></span>
+              <span>Entrada</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-box-arrow-down"></i></span>
+              <span>Saída</span>
             </a>
           </li>
           <li class="my-2">
@@ -188,20 +165,30 @@
         <div class="row">
           <div class="form-group col-sm-2">
             <form>
-              <label for="input-produto-nome">Código do Setor</label>
-              <input id="input-produto-nome" type="text" class="form-control" />
+              <label for="input-setor-sigla">Sigla do Setor</label>
+              <input id="siglaSetor" type="text" class="form-control" />
             </form>
           </div>
-          <div class="form-group col-sm-4">
+          <div class="form-group col-sm">
             <form>
-              <label for="input-produto-nome">Nome do Setor</label>
-              <input id="input-produto-nome" type="text" class="form-control" />
+              <label for="input-setor-nome">Nome do Setor</label>
+              <input id="input-setor-nome" type="text" class="form-control"/>
             </form>
           </div>
-          <div class="form-group col-sm-6">
+        </div>
+        <div class="row">
+          <div class="col-md-3 form-group">
+            <label for="input-setor-tipo">Tipo</label>
+            <select class="form-select" aria-label="select" required>
+              <option selected>Selecione</option>
+              <option value="fnPesquisa">Grupo de Pesquisa</option>
+              <option value="fnEnsino">Ensino</option>
+            </select>
+          </div>
+          <div class="form-group col-sm-9">
             <form>
-              <label for="input-produto-nome">Responsável do Setor</label>
-              <input id="input-produto-nome" type="text" class="form-control" />
+              <label for="input-setor-resp">Responsável do Setor</label>
+              <input id="input-setor-resp" type="text" class="form-control" placeholder="Nome Completo do Responsável pelo Setor"/>
             </form>
           </div>
         </div>
@@ -216,6 +203,8 @@
     </div>
   </main>
   <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
+  <script src="../../js/frontend/includeHTML.js"></script>
+  <script>includeHTML()</script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
 </body>
 

@@ -20,43 +20,7 @@
 
 <body>
     <!-- Barra de navegação -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
-                aria-controls="offcanvasExample">
-                <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
-            </button>
-            <a href="../../html/adm/index.html" class="navbar-brand">
-                <img id="logo" src="../../img/chemistry - logo.png" alt="Chemistry" class="align-middle">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
-                aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="row">
-                <div class="d-flex col me-3 justify-content-end">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="bi bi-person-circle"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Meu perfil</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="btn-danger dropdown-item" href="#">Configuração</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="d-flex col me-3 justify-content-end me-0">
-                    <button type="button" class="btn btn-sair"><i class="bi bi-box-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div include-html="../../html/componentes/navbar.html"></div>
 
     <!-- Menu offcanvas -->
     <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
@@ -106,10 +70,33 @@
                             <span>Cadastrar Setor</span>
                         </a>
                     </li>
+                    <li class="my-2">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
                     <li>
                         <a href="../../html/adm/verSolicitacoes.html" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-clipboard"></i></span>
                             <span>Solicitações</span>
+                        </a>
+                    </li>
+                    <li class="my-2">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+                            operações
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-box-arrow-in-down"></i></span>
+                            <span>Entrada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-box-arrow-down"></i></span>
+                            <span>Saída</span>
                         </a>
                     </li>
                     <li class="my-2">
@@ -208,20 +195,19 @@
                                     <th scope="col">Unidades</th>
                                     <th scope="col">Quantidade</th>
                                     <th scope="col">Validade</th>
-                                    <th scope="col">Setor</th>
+                                    <th scope="col">Finalidade</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr scope="row">
+                                <tr>
                                     <td>0001</td>
-                                    <td><a href="#">ÁCIDO ACÉTICO GLACIAL</a></td>
+                                    <td><a href="../../html/adm/verReagente.html">ÁCIDO ACÉTICO GLACIAL</a></td>
                                     <td>QUIMEX</td>
                                     <td>1</td>
                                     <td>1000 ml</td>
                                     <td>16/12/2024</td>
-                                    <td>GPPMI</td>
-                                    <td><a href="#" class="more">Detalhes</a></td>
+                                    <td>Ensino</td>
                                 </tr>
                                 <tr>
                                     <td>0002</td>
@@ -230,14 +216,14 @@
                                     <td>1</td>
                                     <td>100 g</td>
                                     <td>17/08/2023</td>
-                                    <td>NEA</td>
-                                    <td><a href="#" class="more">Detalhes</a></td>
+                                    <td>Pesquisa</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+
             <div class="col">
                 <div class="card">
                     <div class="card-header">
@@ -247,13 +233,11 @@
                         <table class="table table-striped custom-table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Cód.</th>
+                                    <th scope="col-2">Cód.</th>
                                     <th scope="col">Nome</th>
                                     <th scope="col">Marca</th>
                                     <th scope="col">Unidades</th>
                                     <th scope="col">Capacidade</th>
-                                    <th scope="col">Setor</th>
-                                    <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -263,8 +247,6 @@
                                     <td>MYLABOR</td>
                                     <td>1</td>
                                     <td>500 ml</td>
-                                    <td>GPPMI</td>
-                                    <td><a href="#" class="more">Detalhes</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -276,6 +258,8 @@
     </main>
     <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="../../js/frontend/includeHTML.js"></script>
+    <script>includeHTML()</script>
     <script src="../../js/popper.min.js"></script>
     <script src="../../js/main.js"></script>
 </body>

@@ -25,7 +25,7 @@ function saveReagente(){
             quantLeft: iestoque.value,
             //controlled: icontrolado.value, ->Inserir se o reagente é controlado ou não
             //codigo: icodigo.value, ->Inserir codigo de reagente,
-            sector: isetor.options[isetor.selectedIndex].value,
+            //sector: isetor.options[isetor.selectedIndex].value,
             unidade: iunidade.value
         })
     })
