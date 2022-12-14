@@ -13,6 +13,9 @@ Repositório da aplicação Chemistry que servirá para o controle de estoque e 
 
 # Chemistry: controle de estoque
 
+<details><summary>+</summary>
+<p>
+
 ## Introdução
 
 
@@ -52,7 +55,6 @@ As ferramentas utilizadas para o desenvolvimento incluem Java, que é uma lingua
 | 05/10/2022 | 2.1 | Correção de Casos de Uso | Todos |
 | 10/10/22 | 2.2 | Criação dos Diagramas de Transição de Estado, inserção dos Diagramas de Atividades e correção do Diagrama de Classes. | Todos |
 | 13/10/22 | 2.3 | Correção do Diagrama de Sequência do Caso de Uso 8. | Regiana |
-
 
 ### Problema de negócio
 O sistema de gerenciamento de estoque do laboratório de química tem como objetivo permitir a administração dos devidos produtos (reagente e vidraria) de modo a permitir a adição, remoção e edição dos produtos, além de registar as solicitações feitas pelos professores e alunos pesquisadores aos produtos.
@@ -96,6 +98,88 @@ _Validade dos Reagentes_
 
 * **RGN2** - Os reagentes com validade fora do prazo só deverão ser disponibilizados para funções não relacionadas à pesquisa. Caso contrário, o mesmo deverá estar dentro da validade.
 
-## Diagramas de Caso de Uso
+</p>
+</details>
+
+<details><summary>DIAGRAMAS DE CASOS DE USO</summary>
+<p>
+
+## Diagramas de Casos de Uso
 * **Caso de Uso 1** - Visão Geral
 ![Screenshot](Diagramas/vis%C3%A3o_geral.png)
+
+* **Caso de Uso 2** - Logar no Sistema
+![Screenshot](Diagramas/logar_sistema.png)
+
+* **Caso de Uso 3** - Criar e Manter Materiais
+![Screenshot](Diagramas/criar_manter_materiais.png)
+
+* **Caso de Uso 4** - Procurar Materiais
+![Screenshot](Diagramas/procurar_materiais.png)
+
+* **Caso de Uso 5** - Realizar Solicitação
+![Screenshot](Diagramas/realizar_solicitacao.png)
+
+* **Caso de Uso 6** - Visualizar Solicitação
+![Screenshot](Diagramas/visualizar_solicitacao.png)
+
+* **Caso de Uso 7** - Atualizar Estoque
+![Screenshot](Diagramas/atualizar_estoque.png)
+
+* **Caso de Uso 8** - Emitir FISPQ
+![Screenshot](Diagramas/emitir_fispq.png)
+
+* **Caso de Uso 9** - Emitir Relatórios
+![Screenshot](Diagramas/emitir_relatorio.png)
+
+</p>
+</details>
+
+<details><summary>ESPECIFICAÇÃO DE CASOS DE USO</summary>
+<p>
+
+## Especificação de Casos de Uso
+
+
+</p>
+</details>
+
+<details><summary>DIAGRAMA DE CLASSES</summary>
+<p>
+
+## Diagrama de Classes 
+* **Caso de Uso 1** - Visão Geral
+![Screenshot]()
+
+</p>
+</details>
+
+<details><summary>DIAGRAMAS DE SEQUÊNCIA</summary>
+<p>
+
+## Diagramas de Sequência
+* **Caso de Uso 1** - Visão Geral
+![Screenshot]()
+
+</p>
+</details>
+
+<details><summary>DIAGRAMAS DE ATIVIDADES</summary>
+<p>
+
+## Diagramas de Atividades
+* **Caso de Uso 1** - Visão Geral
+![Screenshot]()
+
+</p>
+</details>
+
+<details><summary>DIAGRAMAS DE TRANSIÇÃO DE ESTADO</summary>
+<p>
+
+## Diagramas de Transição de Estado
+* **Caso de Uso 1** - Visão Geral
+![Screenshot]()
+
+</p>
+</details>
