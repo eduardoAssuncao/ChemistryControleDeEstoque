@@ -188,8 +188,8 @@ Esse revoltado não quer ficar no lugar dele
 <p>
 
 ## Diagrama de Classes 
-* **Caso de Uso 1** - Visão Geral
-![Screenshot]()
+
+![Screenshot](Diagramas/diagrama_classe.png)
 
 </p>
 </details>
@@ -198,8 +198,17 @@ Esse revoltado não quer ficar no lugar dele
 <p>
 
 ## Diagramas de Sequência
-* **Caso de Uso 1** - Visão Geral
-![Screenshot]()
+* **Caso de Uso 4** - Procurar Materiais
+![Screenshot](Diagramas/procurar_material_sequencia.png)
+
+* **Caso de Uso 5** - Realizar Solicitação
+![Screenshot](Diagramas/realizar_solicitacao_sequencia.png)
+
+* **Caso de Uso 6** - Visualizar Solicitação
+![Screenshot](Diagramas/realizar_solicitacao_sequencia.png)
+
+* **Caso de Uso 8** - Emitir FISPQ
+![Screenshot](Diagramas/emitir_fispq_sequencia.png)
 
 </p>
 </details>
@@ -208,8 +217,17 @@ Esse revoltado não quer ficar no lugar dele
 <p>
 
 ## Diagramas de Atividades
-* **Caso de Uso 1** - Visão Geral
-![Screenshot]()
+* **Caso de Uso 4** - Procurar Materias
+![Screenshot](Diagramas/procurar_materiais_atividades.png)
+
+* **Caso de Uso 5** - Realizar Solicitação
+![Screenshot](Diagramas/realizar_solicitacao_atividades.png)
+
+* **Caso de Uso 6** - Visualizar Solicitações
+![Screenshot](Diagramas/visualizar_solicitacao_atividades.png)
+
+* **Caso de Uso 8** - Emitir FISPQ
+![Screenshot](Diagramas/emitir_fispq_atividades.png)
 
 </p>
 </details>
@@ -218,8 +236,20 @@ Esse revoltado não quer ficar no lugar dele
 <p>
 
 ## Diagramas de Transição de Estado
-* **Caso de Uso 1** - Visão Geral
-![Screenshot]()
+* **Transição de Estado 1** - Usuário
+![Screenshot](Diagramas/usuario_transicao_estado.png)
+
+* **Transição de Estado 2** - Material
+![Screenshot](Diagramas/material_transicao_estado.png)
+
+* **Transição de Estado 3** - Solicitação
+![Screenshot](Diagramas/solicitacao_transicao_estado.png)
+
+* **Transição de Estado 4** - Relatório
+![Screenshot](Diagramas/relatorio_transicao_estado.png)
+
+* **Transição de Estado 5** - FISPQ
+![Screenshot](Diagramas/fispq_transicao_estado.png)
 
 </p>
 </details>
