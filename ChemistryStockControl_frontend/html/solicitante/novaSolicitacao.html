@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/paginas/dashboard.css">
     <link rel="stylesheet" href="../../css/paginas/busca.css">
-    <link rel="stylesheet" href="../../css/paginas/novaSolicit.css">
+    <link rel="stylesheet" href="../../css/paginas/table.css">
+    <link rel="stylesheet" href="../../css/paginas/tableSolic.css">
+    <link rel="stylesheet" href="../../css/paginas/selectpickerDate.css">
     <title>CHEMISTRY Controle de Estoque </title>
 
     <link rel="icon" href="../../img/chemistry - icon.svg" />
@@ -18,39 +20,7 @@
 
 <body>
     <!-- Barra de navegação -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
-                aria-controls="offcanvasExample">
-                <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
-            </button>
-            <a href="../../html/solicitante/index2.html" class="navbar-brand">
-                <img id="logo" src="../../img/chemistry - logo.png" alt="Chemistry" class="align-middle">
-            </a>
-            <div class="row">
-                <div class="d-flex col me-3 justify-content-end">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="bi bi-person-circle"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Meu perfil</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="btn-danger dropdown-item" href="#">Configuração</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="d-flex col me-3 justify-content-end me-0">
-                    <button type="button" class="btn btn-sair"><i class="bi bi-box-arrow-right"></i></button>
-                </div>
-            </div> 
-        </div>
-    </nav>
+    <div include-html="../../html/componentes/navbar.html"></div>
 
     <!-- Menu offcanvas -->
     <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
@@ -121,12 +91,7 @@
                 <div class="container-pesquisa">
                     <form class="input-group">
                         <input id="inputMat" type="text" class="form-control" placeholder="Pesquisar por" />
-                        <select id="selectMaterial" class="selectpicker form-control" data-live-search="true">
-                            <option value="reagente">Reagente</option>
-                            <option value="vidraria">Vidraria</option>
-                        </select>
-                        <button id="btnBuscaMat" class="btn btn-verde" type="button"><i
-                                class="bi bi-search"></i></button>
+                        <button id="btnBuscaMat" class="btn btn-verde" type="button"><i class="bi bi-search"></i></button>
                     </form>
                 </div>
                 <div class=" m-4 dropdown-divider"></div>
@@ -134,16 +99,16 @@
                     <div class="row">
                         <div class="col-md-8 form-group">
                             <label for="input-solic-material">Nome</label>
-                            <input id="inputMat" type="text" class="form-control"/>
+                            <input id="inputMat" type="text" class="form-control" />
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                              <label for="input-estoque">Estoque</label>
-                              <input id="input-estoque" type="text" class="form-control"/>
+                                <label for="input-estoque">Estoque</label>
+                                <input id="input-estoque" type="text" class="form-control" />
                             </div>
-                          </div>
+                        </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-3 form-group">
                             <label for="input-solic-finalidade">Finalidade</label>
@@ -197,32 +162,65 @@
                     <!--Botoes-->
                     <div class="d-flex my-3 justify-content-end">
                         <div class="d-grid gap-3 d-md-flex me-2">
-                            <a href="../../html/solicitante/novaSolicitacao.html" class="btn  btn-secondary me-md-2">Limpar</a>
+                            <a href="../../html/solicitante/novaSolicitacao.html"
+                                class="btn  btn-secondary me-md-2">Limpar</a>
                         </div>
                         <div class="d-grid gap-3 d-md-flex">
-                            <button class="btn btn-primary me-md-2" type="submit">Enviar</button>
+                            <button class="btn btn-primary me-md-2" type="submit">Adicionar</button>
                         </div>
                     </div>
                 </form>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title"><i class="bi bi-card-checklist me-2"></i>Pedido</h5>
+                <div class="include-table-pedido">
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span><i class="bi bi-card-checklist m-2"></i></span>Pedido de Solicitação
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Quantidade</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
 
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-center">
-                                </div>
+                            <tbody>
+                                <tr>
+                                    <td>ÁCIDO ACÉTICO GLACIAL</td>
+                                    <td>1 L</td>
+                                    <td><a styles="color: red;" action=""><i class="bi bi-x-circle-fill m-2"></i>Remover</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="d-flex my-3 justify-content-center">
+                        <div class="col-md-3 col-sm-4">
+                            <label for="date" class="">Data da Retirada</label>
+                            <div class="input-group date" id="dataRetirada">
+                                <input type="date" class="form-control" required>
                             </div>
                         </div>
+                        <div class="col-md-3 col-sm-4">
+                            <label for="date" class="">Data da Devolução</label>
+                            <div class="input-group date" id="dataDevolucao">
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex my-3 justify-content-center">
+                        <button id="btnExcluirReagente" class="btn btn-primary me-md-2" type="submit">Enviar
+                            Solicitação</button>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </main>
     <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
+    <script src="../../js/frontend/includeHTML.js"></script>
+    <script>includeHTML()</script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
 </body>
 
