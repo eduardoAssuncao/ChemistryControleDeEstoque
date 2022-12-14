@@ -1,0 +1,8 @@
+.custom-table tbody tr:hover td,
+.custom-table tbody tr:focus td {
+    color: none;
+}
+.custom-table tbody tr:hover td a,
+.custom-table tbody tr:focus td a {
+    color:red;
+}

@@ -80,7 +80,7 @@ html {
     font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 article,
@@ -104,7 +104,7 @@ body {
     line-height: 1.5;
     color: #3e5569;
     text-align: left;
-    background-color: #eeeeee
+    background-color: #eeeeee;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -116,6 +116,9 @@ hr {
     box-sizing: content-box;
     height: 0;
     overflow: visible
+}
+.offcanvas .offcanvas-body::-webkit-scrollbar {
+    width: 0px;
 }
 
 h1,
@@ -234,7 +237,8 @@ pre {
     margin-top: 0;
     margin-bottom: 1rem;
     overflow: auto;
-    -ms-overflow-style: scrollbar
+    -ms-overflow-style: scrollbar;
+    overflow-x: scroll; 
 }
 
 figure {
