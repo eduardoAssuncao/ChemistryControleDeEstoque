@@ -1,9 +1,9 @@
 const formVidraria = document.querySelector("#form")
 const inome = document.querySelector("#nome")
 const icapacidade = document.querySelector("#capacidade")
-const isetor = document.querySelector("#inputSetor") --
+//const isetor = document.querySelector("#inputSetor")
+const iquantidade = document.querySelector("#quantity")
 const idescricao = document.querySelector("#descricao")
-const iquantidade = document.querySelector("#quantidade")
 function saveVidraria(){
     fetch("http://localhost:8080/api/v1/glasswares",
         {
@@ -17,7 +17,7 @@ function saveVidraria(){
             capacity: icapacidade.value,
             quantity: iquantidade.value,
             particulars: idescricao.value,
-            sector: isetor.value
+            //sector: isetor.value
         })
     })
     .then(function(res) {console.log(res)})

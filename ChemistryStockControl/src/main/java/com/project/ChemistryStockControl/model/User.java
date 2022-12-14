@@ -1,5 +1,7 @@
 package com.project.ChemistryStockControl.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 
@@ -8,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -28,6 +31,9 @@ public class User {
 
     @Column(name = "senha")
     private String senha;
+
+    @OneToMany(targetEntity = Solicitation.class)
+    private List solicitationlist;
 
     public User() {
     }
@@ -70,6 +76,14 @@ public class User {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public List getSolicitationlist() {
+        return this.solicitationlist;
+    }
+
+    public void setSolicitationlist(List solicitationlist) {
+        this.solicitationlist = solicitationlist;
     }
 
     public void visualizarSolicitacoes() {

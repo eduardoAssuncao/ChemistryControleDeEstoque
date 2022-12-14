@@ -41,11 +41,20 @@ public class MaterialController {
     }
 
     // get material by id rest api
-    @GetMapping("/materials/{id}")
+    @GetMapping("/materials/id/{id}")
     public ResponseEntity<Material> getMaterialById(@PathVariable Long id) {
 
         Material material = materialRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Material not exist with id :" + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Material not exist with id:" + id));
+        return ResponseEntity.ok(material);
+    }
+
+    // get material by nome rest api
+    @GetMapping("/materials/nome/{nome}")
+    public ResponseEntity<Material> getMaterialByName(@PathVariable String nome) {
+
+        Material material = materialRepository.findByName(nome)
+                .orElseThrow(() -> new ResourceNotFoundException("Material not exist with name :" + nome));
         return ResponseEntity.ok(material);
     }
 
