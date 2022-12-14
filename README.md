@@ -90,8 +90,12 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos não f
 
 _Solicitação de materiais com antecedência_  
 
-**RGN1** -  As solicitações de materiais para grupos de ensino devem ser feitas pelo tipo de usuário “Professor” com 48 horas (2 dias) de antecedência do prazo de entrega.
+* **RGN1** -  As solicitações de materiais para grupos de ensino devem ser feitas pelo tipo de usuário “Professor” com 48 horas (2 dias) de antecedência do prazo de entrega.
 
 _Validade dos Reagentes_  
 
-**RGN2** - Os reagentes com validade fora do prazo só deverão ser disponibilizados para funções não relacionadas à pesquisa. Caso contrário, o mesmo deverá estar dentro da validade.
+* **RGN2** - Os reagentes com validade fora do prazo só deverão ser disponibilizados para funções não relacionadas à pesquisa. Caso contrário, o mesmo deverá estar dentro da validade.
+
+## Diagramas de Caso de Uso
+* **Caso de Uso 1** - Visão Geral
+![Screenshot](Diagramas/vis%C3%A3o_geral.png)
