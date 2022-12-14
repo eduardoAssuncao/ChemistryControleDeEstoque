@@ -108,10 +108,9 @@ _Validade dos Reagentes_
 * **Caso de Uso 1** - Visão Geral
 ![Screenshot](Diagramas/vis%C3%A3o_geral.png)
 
-
 * **Caso de Uso 2** - Logar no Sistema
+
 ![Screenshot](Diagramas/logar_sistema.png)
-Esse revoltado não quer ficar no lugar dele
 
 * **Caso de Uso 3** - Criar e Manter Materiais
 ![Screenshot](Diagramas/criar_manter_materiais.png)
@@ -250,6 +249,29 @@ Esse revoltado não quer ficar no lugar dele
 
 * **Transição de Estado 5** - FISPQ
 ![Screenshot](Diagramas/fispq_transicao_estado.png)
+
+</p>
+</details>
+
+<details><summary>FOTOS DO SISTEMA</summary>
+<p>
+
+## Fotos
+
+* **Procurar Material**
+![Screenshot](Prints/procurar_material.png)
+
+* **Cadastro Reagente**
+![Screenshot](Prints/cadastrar_reagente.png)
+
+* **Cadastro Vidraria**
+![Screenshot](Prints/cadastrar_vidraria.png)
+
+* **Cadastro Setor**
+![Screenshot](Prints/cadastro_setor.png)
+
+* **d**
+![Screenshot]()
 
 </p>
 </details>
