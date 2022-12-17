@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
+// import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+// import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,7 +29,7 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
-    private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    // private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     // get all users
     @GetMapping("/users")
@@ -40,8 +40,8 @@ public class UserController {
     // create user rest api
     @PostMapping("/users")
     public User createUser(@RequestBody User user) {
-        String encoder = this.passwordEncoder.encode(user.getSenha());
-        user.setSenha(encoder);
+        // String encoder = this.passwordEncoder.encode(user.getSenha());
+        // user.setSenha(encoder);
         return userRepository.save(user);
     }
 
