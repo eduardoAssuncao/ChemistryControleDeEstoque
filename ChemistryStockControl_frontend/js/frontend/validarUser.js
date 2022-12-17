@@ -16,7 +16,7 @@ function validar(data) {
         nome = r.name;
         email = r.email;
         senha = r.senha;
-        if(imatricula.value == r.matricula && isenha.value == 55555){
+        if(imatricula.value == r.matricula && isenha.value == r.senha){
             console.log("Logando");
             window.location.href="/ChemistryStockControl_frontend/html/adm/index.html";
 
@@ -34,7 +34,7 @@ form.addEventListener("submit", function(event) {
     
         var data = await response.json();
         //info = data;
-        console.log(data);
+        //console.log(data);
         validar(data);
     }
     getapi("http://localhost:8080/api/v1/users")
