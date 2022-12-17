@@ -1,6 +1,6 @@
 package com.project.ChemistryStockControl.model;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
@@ -32,8 +32,8 @@ public class User {
     @Column(name = "senha")
     private String senha;
 
-    @OneToMany(targetEntity = Solicitation.class)
-    private List solicitationlist;
+    @OneToMany(targetEntity = Solicitation.class) // @OneToMany(cascade = CascadeType.ALL)
+    private Set<Solicitation> solicitationlist; // Verificar se esse relacionamento está certo
 
     public User() {
     }
@@ -78,11 +78,11 @@ public class User {
         this.senha = senha;
     }
 
-    public List getSolicitationlist() {
+    public Set<Solicitation> getSolicitationlist() {
         return this.solicitationlist;
     }
 
-    public void setSolicitationlist(List solicitationlist) {
+    public void setSolicitationlist(Set<Solicitation> solicitationlist) {
         this.solicitationlist = solicitationlist;
     }
 

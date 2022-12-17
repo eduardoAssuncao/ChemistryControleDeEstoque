@@ -88,14 +88,27 @@
                 <div class="col-md-12 m-2">
                     <h3 class="fw-bold">Nova Solicitação</h3>
                 </div>
-                <div class="container-pesquisa">
+                <!--<div class="container-pesquisa">
                     <form class="input-group">
                         <input id="inputMat" type="text" class="form-control" placeholder="Pesquisar por" />
-                        <button id="btnBuscaMat" class="btn btn-verde" type="button"><i class="bi bi-search"></i></button>
+                        <button id="btnBuscaMat" class="btn btn-verde" type="button"><i
+                                class="bi bi-search"></i></button>
                     </form>
+                </div>-->
+                <div class="search-wrapper container-pesquisa">
+                    <label for="search">Search Users</label>
+                    <input type="search" id="search" data-search>
                 </div>
+                <div class="user-cards" data-user-cards-container></div>
+                <template data-user-template>
+                    <div class="card">
+                        <div class="header" data-header></div>
+                        <div class="body" data-body></div>
+                    </div>
+                </template>
+
                 <div class=" m-4 dropdown-divider"></div>
-                <form>
+                <form id="form">
                     <div class="row">
                         <div class="col-md-8 form-group">
                             <label for="input-solic-material">Nome</label>
@@ -190,7 +203,8 @@
                                 <tr>
                                     <td>ÁCIDO ACÉTICO GLACIAL</td>
                                     <td>1 L</td>
-                                    <td><a styles="color: red;" action=""><i class="bi bi-x-circle-fill m-2"></i>Remover</a></td>
+                                    <td><a styles="color: red;" action=""><i
+                                                class="bi bi-x-circle-fill m-2"></i>Remover</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -218,9 +232,12 @@
             </div>
         </div>
     </main>
+    <script src="/ChemistryStockControl_frontend/js/frontend/cadSolic.js"></script>
     <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
     <script src="../../js/frontend/includeHTML.js"></script>
-    <script>includeHTML()</script>
+    <script>
+        includeHTML()
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
 </body>
 
