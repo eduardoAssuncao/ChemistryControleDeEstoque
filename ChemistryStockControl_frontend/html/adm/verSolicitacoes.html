@@ -69,10 +69,10 @@
             </a>
           </li>
           <li>
-              <a href="../../html/adm/verSolicitacoes.html" class="nav-link px-3">
-                  <span class="me-2"><i class="bi bi-clipboard"></i></span>
-                  <span>Solicitações</span>
-              </a>
+            <a href="../../html/adm/verSolicitacoes.html" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-clipboard"></i></span>
+              <span>Solicitações</span>
+            </a>
           </li>
           <li class="my-2">
             <hr class="dropdown-divider bg-light" />
@@ -161,7 +161,9 @@
       <div class="col">
         <div class="card">
           <div class="table-responsive">
-            <table class="table table-striped custom-table">
+            <table id="solicitacoes" class="table table-striped custom-table">
+            </table>
+            <!--<table class="table table-striped custom-table">
               <thead>
                 <tr>
                   <th scope="col">Cód.</th>
@@ -208,15 +210,18 @@
                   <td><a href="#" class="more">Detalhes</a></td>
                 </tr>
               </tbody>
-            </table>
+            </table>-->
           </div>
         </div>
       </div>
     </div>
   </main>
+  <script src="/ChemistryStockControl_frontend/js/frontend/tabelaSolicitacao.js"></script>
   <script src="../js/frontend/bootstrap.bundle.min.js"></script>
   <script src="../../js/frontend/includeHTML.js"></script>
-  <script>includeHTML()</script>
+  <script>
+    includeHTML()
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
 </body>
 
