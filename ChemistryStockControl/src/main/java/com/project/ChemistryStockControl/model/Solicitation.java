@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
@@ -35,8 +36,12 @@ public class Solicitation {
 
     private String destino;
 
+    // @ManyToOne
+    // private User user;
+
     @ManyToOne
-    private User user;
+    @JoinColumn(name = "User_id") // verificar se o relacionamento está correto
+    User user;
 
     @ManyToMany
     private List<Material> materials;

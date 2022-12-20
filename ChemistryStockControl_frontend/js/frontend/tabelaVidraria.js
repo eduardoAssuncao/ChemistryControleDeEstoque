@@ -19,7 +19,7 @@ getVidraria(api_url_vidraria);
 function showVidro(data) {
 	let tab =
 		`<thead>
-        <tr>
+        <tr">
             <th scope="col">Nome</th>
             <th scope="col">Unidades</th>
             <th scope="col">Capacidade</th>
@@ -33,7 +33,7 @@ function showVidro(data) {
 
 		tab += `<tbody>
         <tr scope="row">
-            <td><a href="#">${r.name}</a></td>
+            <td><a href="#" class="name">${r.name}</a></td>
             <td>${r.quantity}</td>
             <td>${r.capacity}</td>
             <td>${r.sector}</td>

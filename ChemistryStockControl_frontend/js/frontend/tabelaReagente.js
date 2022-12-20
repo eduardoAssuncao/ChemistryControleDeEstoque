@@ -39,7 +39,7 @@ function show(data) {
                     <tr scope="row">
                         <td>${r.codigo}</td>
                         <td>${controlled}</td>
-                        <td><a href="#">${r.name}</a></td>
+                        <td><a href="#" class="name">${r.name}</a></td>
                         <td>${r.quantLeft}${r.unidade}</td>
                         <td>${r.quantity}</td>
                         <td>${r.validity}</td>
