@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="../../css/styles.css" />
   <link rel="stylesheet" href="../../css/paginas/dashboard.css">
+  <link rel="stylesheet" href="../../css/paginas/table.css">
   <title>CHEMISTRY Controle de Estoque </title>
 
   <link rel="icon" href="../../img/chemistry - icon.svg" />
@@ -99,11 +100,49 @@
           <h3 class="fw-bold">Procurar Material</h3>
         </div>
       </div>
+      <div class="container-pesquisa">
+        <form class="input-group">
+          <input id="inputMat" type="text" class="form-control" placeholder="Pesquisar por" />
+          <button id="btnBuscaMat" class="btn btn-verde" type="button"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+      <div class="m-4 dropdown-divider"></div>
+      
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-radioactive m-2" viewBox="0 0 16 16">
+                <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z" />
+                <path
+                  d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992L9.653 5.496Zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+              </svg></span>Reagentes Cadastrados
+          </div>
+          <div class="table-responsive">
+            <table id="reagentes" class="table table-striped custom-table">
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <span><i class="bi bi-save m-2"></i></span>Vidrarias Cadastradas
+          </div>
+          <div class="table-responsive">
+            <table id="vidrarias" class="table table-striped custom-table">
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
   <script src="../../js/frontend/includeHTML.js"></script>
   <script>includeHTML()</script>
+  <script src="../../js/frontend/tabelaReagente.js"></script>
+  <script src="../../js/frontend/tabelaVidraria.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
 </body>
 
