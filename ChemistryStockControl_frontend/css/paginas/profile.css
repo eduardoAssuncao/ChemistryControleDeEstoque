@@ -1,0 +1,4 @@
+.container-fluid .form .form-group .input .form-control #floatingPassword{
+    min-width: 2rem;
+    max-width: 2.5rem;
+}

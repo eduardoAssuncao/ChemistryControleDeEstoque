@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../css/style.min.css" />
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/paginas/dashboard.css">
+  <link rel="stylesheet" href="../../css/paginas/verReagente.css">
+  <title>CHEMISTRY Controle de Estoque </title>
+
+  <link rel="icon" href="../../img/chemistry - icon.png" />
+</head>
+
+<body>
+  <!-- Barra de navegação -->
+  <div include-html="../../html/componentes/navbar.html"></div>
+
+  <!-- Menu offcanvas -->
+  <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
+    <div id="offcanvas-body" class="offcanvas-body p-0 pt-3">
+        <nav class="navbar-dark">
+            <ul class="navbar-nav nav-pills">
+                <li>
+                    <a href="../../html/admAux/index3.html" class="nav-link px-3">
+                        <span class="me-2"><i class="bi bi-house"></i></span>
+                        <span>Página Inicial</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <hr class="dropdown-divider bg-light" />
+                </li>
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+                        materiais
+                    </div>
+                </li>
+                <li>
+                    <a href="../../html/admAux/buscaMaterial.html" class="nav-link px-3 active">
+                        <span class="me-2"><i class="bi bi-search"></i></span>
+                        <span>Procurar Material</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <hr class="dropdown-divider bg-light" />
+                </li>
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+                        Solicitações
+                    </div>
+                </li>
+                <li>
+                    <a href="../../html/admAux/verSolicitacoes.html" class="nav-link px-3">
+                        <span class="me-2"><i class="bi bi-clipboard"></i></span>
+                        <span>Pedidos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../../html/admAux/historySolicit.html" class="nav-link px-3">
+                        <span class="me-2"><i class="bi bi-clock-history"></i></span>
+                        <span>Histórico</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <hr class="dropdown-divider bg-light" />
+                </li>
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+                        operações
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-3">
+                        <span class="me-2"><i class="bi bi-box-arrow-in-down"></i></span>
+                        <span>Entrada</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-3">
+                        <span class="me-2"><i class="bi bi-box-arrow-down"></i></span>
+                        <span>Saída</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <hr class="dropdown-divider bg-light" />
+                </li>
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+                        relatórios
+                    </div>
+                </li>
+                <li>
+                    <a href="./relatorioDiario.html" class="nav-link px-3 active">
+                        <span class="me-2"><i class="bi bi-calendar2-date"></i></span>
+                        <span>Diário</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./relatorioMensal.html" class="nav-link px-3">
+                        <span class="me-2"><i class="bi bi-calendar2-month"></i></span>
+                        <span>Mensal</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <hr class="dropdown-divider bg-light" />
+                </li>
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+                        configurações
+                    </div>
+                </li>
+                <li>
+                    <a href="../../html/admAux/profile.html" class="nav-link px-3">
+                        <span class="me-2"><i class="bi bi-person-fill"></i></span>
+                        <span>Meu Perfil</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <hr class="dropdown-divider bg-light" />
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+  <!-- Tela Dados -->
+  <main class="mt-5 pt-3">
+    <div class="container-fluid">
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <div class="card card-body printableArea">
+            <h3 id="nomeReagente"><b>ÁCIDO SULFÚRICO 95%</b></h3>
+            <hr />
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="input-marca-reagente">Marca</label>
+                  <input id="input-marca-reagente" type="text" class="form-control" value="QUIMEX" readonly />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-reag-finalidade">Finalidade</label>
+                  <select class="form-select" aria-label="select" readonly>
+                    <option>Selecione</option>
+                    <option selected value="fnPesquisa">Pesquisa</option>
+                    <option value="fnEnsino">Ensino</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <form>
+                  <label for="date" class="">Data de validade</label>
+                  <div class="input-group date" id="dataValid">
+                    <input type="date" class="form-control" value="2022-05-22" readonly>
+                  </div>
+                </form>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="input-produto-caracteristica">Características</label>
+                  <textarea id="input-produto-caracteristica" rows="3" class="form-control" readonly></textarea>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-produto-qtd-frasco">Quatidade do Frasco</label>
+                  <input id="input-produto-qtd-frasco" type="text" class="form-control" value="2" readonly />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-produto-estoque">Estoque</label>
+                  <input id="input-produto-estoque" type="number" class="form-control" value="20000" readonly />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-unidade">Unidade</label>
+                  <select class="form-select" aria-label="select" aria-disabled="true">
+                    <option selected>Selecione</option>
+                    <option value="ml" selected>ml</option>
+                    <option value="g">g</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div include-html="../../html/componentes/btn-editar-excluir.html"></div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
+  <script src="../../js/frontend/includeHTML.js"></script>
+  <script>includeHTML()</script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+  <script src="../../js/frontend/main.js"></script>
+
+</body>
+
+</html>

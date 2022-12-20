@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="../../css/style.min.css" />
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/paginas/dashboard.css">
-    <link rel="stylesheet" href="../../css/paginas/busca.css">
-    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../../css/paginas/table.css">
+    <link rel="stylesheet" href="../../css/paginas/tableSolic.css">
     <title>CHEMISTRY Controle de Estoque </title>
 
     <link rel="icon" href="../../img/chemistry - icon.svg" />
@@ -42,7 +41,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="../../html/adm/buscaMaterial.html" class="nav-link px-3 active">
+                        <a href="../../html/adm/buscaMaterial.html" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-search"></i></span>
                             <span>Procurar Material</span>
                         </a>
@@ -74,20 +73,9 @@
                         <hr class="dropdown-divider bg-light" />
                     </li>
                     <li>
-                        <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
-                            Solicitações
-                        </div>
-                    </li>
-                    <li>
-                        <a href="../../html/adm/verSolicitacoes.html" class="nav-link px-3">
+                        <a href="../../html/adm/verSolicitacoes.html" class="nav-link px-3 active">
                             <span class="me-2"><i class="bi bi-clipboard"></i></span>
-                            <span>Pedidos</span>
-                        </a>
-                    </li>                    
-                    <li>
-                        <a href="../../html/adm/historySolicit.html" class="nav-link px-3">
-                            <span class="me-2"><i class="bi bi-clock-history"></i></span>
-                            <span>Histórico</span>
+                            <span>Solicitações</span>
                         </a>
                     </li>
                     <li class="my-2">
@@ -131,7 +119,7 @@
                         <div class="collapse" id="layouts">
                             <ul class="navbar-nav ps-3">
                                 <li>
-                                    <a href="../../html/adm/relatorioDiario.html" class="nav-link px-3">
+                                    <a href="./relatorioDiario.html" class="nav-link px-3">
                                         <span class="me-2"><i class="bi bi-calendar2-date"></i></span>
                                         <span>Diário</span>
                                     </a>
@@ -141,7 +129,7 @@
                         <div class="collapse" id="layouts">
                             <ul class="navbar-nav ps-3">
                                 <li>
-                                    <a href="../../html/adm/relatorioMensal.html" class="nav-link px-3">
+                                    <a href="./relatorioMensal.html" class="nav-link px-3">
                                         <span class="me-2"><i class="bi bi-calendar2-month"></i></span>
                                         <span>Mensal</span>
                                     </a>
@@ -150,17 +138,18 @@
                         </div>
                     </li>
                     <li>
-                        <a href="../../html/adm/relatorioPF.html" class="nav-link px-3">
+                        <a href="./relatorioPF.html" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-file-text"></i></span>
                             <span>Polícia Federal</span>
                         </a>
                     </li>
                     <li>
-                        <a href="../../html/adm/relatorioExercito.html" class="nav-link px-3">
+                        <a href="./relatorioExercito.html" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-file-text"></i></span>
                             <span>Exército</span>
                         </a>
                     </li>
+
                     <li class="my-2">
                         <hr class="dropdown-divider bg-light" />
                     </li>
@@ -188,56 +177,98 @@
         <div class="container-fluid">
             <div class="row mt-3">
                 <div class="col-md-12 m-2">
-                    <h3>Procurar Material</h3>
+                    <h3 class="fw-bold">Solicitação</h3>
                 </div>
-            </div>
-            <div class="container-pesquisa">
-                <form class="input-group">
-                    <input id="inputMat" type="text" class="form-control" placeholder="Pesquisar por" />
-                    <button id="btnBuscaMat" class="btn btn-verde" type="button"><i class="bi bi-search"></i></button>
+                <div class="m-4 dropdown-divider"></div>
+                <form>
+                    <div class="row">
+                        <div class="col-2 form-group">
+                            <select class="form-select" aria-label="select" disabled>
+                                <option selected value="Pendente">Pendente</option>
+                                <option value="Confirmado">Confirmado</option>
+                                <option value="Entregue">Entregue</option>
+                                <option value="Devolvido">Devolvido</option>
+                                <option value="Atrasado">Atrasado</option>
+
+                            </select>
+                        </div>
+                        <div class="col form-group dropdown">
+                            <button id="btnAtualizaSituacao" class="btn btn-primary" type="btn">Atualizar
+                                Situação</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 form-group">
+                            <label for="input-nome-solicitante">Nome do Solicitante</label>
+                            <input id="nomeSolicitante" type="text" class="form-control" readonly/>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label for="input-solic-cargo">Cargo</label>
+                            <select class="form-select" aria-label="select" disabled>
+                                <option value="Teacher">Professor(a)</option>
+                                <option value="Researcher">Pesquisador(a)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label for="input-solic-grupoPesquisa">Grupo de Pesquisa</label>
+                            <select class="form-select" aria-label="select" disabled>
+                                <option value="1">GPPMI</option>
+                                <option value="2">DAQ</option>
+                                <option value="3">Grupo BIOMASSA</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col form-group">
+                            <label for="input-solic-finalidade">Finalidade</label>
+                            <select class="form-select" aria-label="select" disabled>
+                                <option value="fnPesquisa">Pesquisa</option>
+                                <option value="fnEnsino">Ensino</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="date" class="">Data da Retirada</label>
+                            <div class="input-group date" id="dataRetirada">
+                                <input type="date" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="date" class="">Data da Devolução</label>
+                            <div class="input-group date" id="dataDevolucao">
+                                <input type="date" class="form-control" readonly>
+                            </div>
+                        </div>
+                    </div>
                 </form>
-            </div>
+                <div class="include-table-pedido">
+                    <!-- inserir através do JS  -->
+                    <div class="card mt-2 mt-4">
+                        <div class="card-header">
+                            <span><i class="bi bi-card-checklist m-2"></i></span>Itens
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Item</th>
+                                        <th scope="col">Quantidade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-            <div class="m-4 dropdown-divider"></div>
-
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-radioactive m-2" viewBox="0 0 16 16">
-                                <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z" />
-                                <path
-                                    d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992L9.653 5.496Zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                            </svg></span>Reagentes Cadastrados
-                    </div>
-                    <div class="table-responsive">
-                        <table id="reagentes" class="table table-striped custom-table">
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        <span><i class="bi bi-save m-2"></i></span>Vidrarias Cadastradas
-                    </div>
-                    <div class="table-responsive">
-                        <table id="vidrarias" class="table table-striped custom-table">
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
     </main>
     <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
     <script src="../../js/frontend/includeHTML.js"></script>
     <script>includeHTML()</script>
-    <script src="../../js/popper.min.js"></script>
-    <script src="../../js/frontend/tabelaReagente.js"></script>
-    <script src="../../js/frontend/tabelaVidraria.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
 </body>
 
 </html>
