@@ -91,7 +91,8 @@
                 <div class="container-pesquisa">
                     <form class="input-group">
                         <input id="inputMat" type="text" class="form-control" placeholder="Pesquisar por" />
-                        <button id="btnBuscaMat" class="btn btn-verde" type="button"><i class="bi bi-search"></i></button>
+                        <button id="btnBuscaMat" class="btn btn-verde" type="button"><i
+                                class="bi bi-search"></i></button>
                     </form>
                 </div>
                 <div class=" m-4 dropdown-divider"></div>
@@ -171,48 +172,50 @@
                     </div>
                 </form>
                 <div class="include-table-pedido">
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <span><i class="bi bi-card-checklist m-2"></i></span>Pedido de Solicitação
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-striped custom-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Item</th>
-                                    <th scope="col">Quantidade</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
+                    <!-- inserir através do JS  -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span><i class="bi bi-card-checklist m-2"></i></span>Pedido de Solicitação
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Item</th>
+                                        <th scope="col">Quantidade</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
 
-                            <tbody>
-                                <tr>
-                                    <td>ÁCIDO ACÉTICO GLACIAL</td>
-                                    <td>1 L</td>
-                                    <td><a styles="color: red;" action=""><i class="bi bi-x-circle-fill m-2"></i>Remover</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                <tbody>
+                                    <tr>
+                                        <td>ÁCIDO ACÉTICO GLACIAL</td>
+                                        <td>1 L</td>
+                                        <td><a styles="color: red;" action=""><i
+                                                    class="bi bi-x-circle-fill m-2"></i>Remover</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                    </div>
-                    <div class="d-flex my-3 justify-content-center">
-                        <div class="col-md-3 col-sm-4">
-                            <label for="date" class="">Data da Retirada</label>
-                            <div class="input-group date" id="dataRetirada">
-                                <input type="date" class="form-control" required>
+                        </div>
+                        <div class="d-flex my-3 justify-content-center">
+                            <div class="col-md-3 col-sm-4">
+                                <label for="date" class="">Data da Retirada</label>
+                                <div class="input-group date" id="dataRetirada">
+                                    <input type="date" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4">
+                                <label for="date" class="">Data da Devolução</label>
+                                <div class="input-group date" id="dataDevolucao">
+                                    <input type="date" class="form-control" required>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-4">
-                            <label for="date" class="">Data da Devolução</label>
-                            <div class="input-group date" id="dataDevolucao">
-                                <input type="date" class="form-control" required>
-                            </div>
+                        <div class="d-flex my-3 justify-content-center">
+                            <button id="btnExcluirReagente" class="btn btn-primary me-md-2" type="submit">Enviar
+                                Solicitação</button>
                         </div>
-                    </div>
-                    <div class="d-flex my-3 justify-content-center">
-                        <button id="btnExcluirReagente" class="btn btn-primary me-md-2" type="submit">Enviar
-                            Solicitação</button>
                     </div>
                 </div>
             </div>

@@ -147,6 +147,30 @@
               <span>Exército</span>
             </a>
           </li>
+
+          <li class="my-2">
+            <hr class="dropdown-divider bg-light" />
+          </li>
+          <li>
+            <div class="text-muted small fw-bold text-uppercase px-3 mb-2">
+              configurações
+            </div>
+          </li>
+          <li>
+            <a href="../../html/adm/profile.html" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-person-fill"></i></span>
+              <span>Meu Perfil</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-people-fill"></i></span>
+              <span>Usuários</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <hr class="dropdown-divider bg-light" />
+          </li>
         </ul>
       </nav>
     </div>
@@ -162,25 +186,30 @@
       </div>
 
       <form id="form" class="form-vertical  js-form-loading ms-2">
-          
-        <div class="form-group">
+
+        <div class="row">
+          <div class="col-2 form-group">
             <label for="input-codigo-reagente">Código</label>
             <input id="codigo" type="text" class="form-control" />
+          </div>        
+          <div class="col-8 form-group">
+            <label for="input-produto-nome">Nome do Reagente</label>
+            <input id="nomeReagente" type="text" class="form-control" />
+          </div>
+          <div class="col m-2">
+            <input class="m-2" type="checkbox" id="controlado" name="controlado" value="controlado">
+            <label for="controlado">Controlado</label>
+          </div>
         </div>
-        <input type = "checkbox" id = "controlado" name = "controlado" value = "controlado">
-        <label for = "controlado"> Controlado </label>
+        
 
-        <div class="form-group">
-          <label for="input-produto-nome">Nome do Reagente</label>
-          <input id="nomeReagente" type="text" class="form-control" />
-        </div>
+
         <div class="form-group">
           <label for="input-produto-caracteristica">Características</label>
           <textarea id="particulars" rows="3" class="form-control"></textarea>
         </div>
 
         <div class="row">
-
           <div class="col-sm-4">
             <label for="date" class="">Data de validade</label>
             <div class="input-group date">
@@ -233,7 +262,7 @@
           <div class="col-sm-4">
             <div class="form-group">
               <label for="input-produto-estoque">Estoque</label>
-              <input id="quantity" type="number" min="0" class="form-control" placeholder="Unidades"/>
+              <input id="quantity" type="number" min="0" class="form-control" placeholder="Unidades" />
             </div>
           </div>
         </div>
@@ -241,25 +270,6 @@
         <div include-html="../../html/componentes/btn-cancel-submit.html"></div>
 
       </form>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
-              <span><i class="bi bi-list-nested"></i></span> Reagentes Cadastrados
-            </div>
-            <div class="card-body">
-              <div class="d-flex justify-content-center">
-                <form class="d-flex" role="search">
-                  <input class="form-control me-0" type="search" placeholder="Pesquisar por..." aria-label="Search">
-                  <button class="btn btn-secondary" type="button">
-                    <i class="bi bi-search"></i>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </main>
   <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
