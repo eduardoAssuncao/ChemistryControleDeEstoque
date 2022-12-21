@@ -93,3 +93,8 @@ li {
 #link>u{
   color: #42cf0a;
 }
+
+.btn:hover {
+    color: #063606;
+    text-decoration: none;
+}

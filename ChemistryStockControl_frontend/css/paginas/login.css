@@ -9,3 +9,21 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+a:active,
+a:hover {
+    color: #1b531b
+}
+
+a {
+    color:white
+}
+
+.form-check-input:checked {
+    background-color: #228B22;
+    border-color: #228B22;
+}
+
+input[type=checkbox] {
+    background-color: #228B22;
+}
