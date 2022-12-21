@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="../../css/style.min.css" />
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="../../css/paginas/dashboard.css">
-  <link rel="stylesheet" href="../../css/paginas/busca.css">
+  <link rel="stylesheet" href="../../css/paginas/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="../../css/paginas/table.css">
   <title>CHEMISTRY Controle de Estoque </title>
 
   <link rel="icon" href="../../img/chemistry - icon.svg" />
@@ -189,12 +190,45 @@
           <h3 class="fw-bold">Relatório Diário do Estoque</h3>
         </div>
       </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table id="table_config" class="table table-striped data-table custom-table">
+              <thead>
+                <tr>
+                  <th>Cód.</th>
+                  <th>Nome</th>
+                  <th>Finalidade</th>
+                  <th>Controlado</th>
+                  <th>Validade</th>
+                  <th>Quant.</th>
+                  <th>Estoque</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0001</td>
+                  <td>ÁCIDO ACÉTICO GLACIAL</td>
+                  <td>Pesquisa</td>
+                  <td>Não</td>
+                  <td>2022-12-22</td>
+                  <td>2</td>
+                  <td>1000 ml</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   <script src="../../js/frontend/bootstrap.bundle.min.js"></script>
   <script src="../../js/frontend/includeHTML.js"></script>
   <script>includeHTML()</script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+  <script src="../../js/frontend/table/jquery.min.js"></script>
+  <script src="../../js/frontend/table/datatables.min.js"></script>
+  <script>$("#table_config").DataTable();</script>
 </body>
 
 </html>
