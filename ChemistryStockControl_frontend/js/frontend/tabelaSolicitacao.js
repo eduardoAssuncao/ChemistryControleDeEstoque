@@ -33,7 +33,7 @@ function showSolicitacao(data) {
 		tab += `<tbody>
         <tr scope="row">
             <td><a href="#" class="name">${r.codSolicitacao}</a></td>
-            <td>${r.user}</td>
+            <td>${r.user.name}</td>
             <td>${r.justificativa}</td>
             <td>${r.destino}</td>
             <td><a href="#"class="more">Detalhes</a></td>
