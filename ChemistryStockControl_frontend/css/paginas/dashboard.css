@@ -114,3 +114,12 @@ li {
     background-color: green;
     color: #fff;
 }
+
+a:active,
+a:hover {
+    color: #1c1f1c
+}
+
+a {
+    color:white
+}
