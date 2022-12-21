@@ -4,6 +4,7 @@ const icapacidade = document.querySelector("#capacidade")
 //const isetor = document.querySelector("#inputSetor")
 const iquantidade = document.querySelector("#quantity")
 const idescricao = document.querySelector("#descricao")
+const iunidade = document.getElementById("unidade")
 function saveVidraria(){
     fetch("http://localhost:8080/api/v1/glasswares",
         {

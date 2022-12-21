@@ -9,6 +9,7 @@ async function getapi(url) {
 
 getapi(api_url);
 
+const itemSelecionado = '';
 let searchable = []
 const searchInput = document.getElementById("inputMat")
 const searchWrapper = document.querySelector(".search-wrapper")
@@ -40,11 +41,14 @@ searchInput.addEventListener('keyup', () => {
   
     const content = results
       .map((item) => {
-        return `<a href='#'><li>${item}</li></a>`;
+        return `<a href='#' onclick=(seleciona(${item}))><li>${item}</li></a>`;
       })
       .join('');
   
     searchWrapper.classList.add('show');
     resultsWrapper.innerHTML = `<ul>${content}</ul>`;
   }
-  
+
+function seleciona(item){
+    console.log(item)
+}

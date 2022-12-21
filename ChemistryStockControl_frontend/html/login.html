@@ -47,8 +47,13 @@
                     <!-- Temos que tirar isso, não? -->
                 </label>
             </div>
-            <button id="enviar" class="w-100 btn btn-lg rounded-pill" type="submit">Entrar</button>
+
+            <form th:action="@{/persistMessage}" method="post">
+                <button id="enviar" class="w-100 btn btn-lg rounded-pill" type="submit">Entrar</button>
+            </form>
+
             <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+
         </form>
 
         <table id="employees"></table>
