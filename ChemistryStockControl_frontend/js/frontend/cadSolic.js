@@ -49,6 +49,7 @@ const iDevol = document.querySelector("#dataDevolucao")
 const iJustificativa = document.querySelector("#text-solicit-just")
 const iDest = document.querySelector("#text-solicit-residuos")
 const itensSolic = []
+
 function realizaSolic(){
         fetch("http://localhost:8080/api/v1/solicitations",
             {
@@ -65,6 +66,7 @@ function realizaSolic(){
                 devolucao: iDevol.value,
                 justificativa: iJustificativa.value,
                 destino: iDest.value
+                //user: 1
             })
         })
         .then(function(res) {console.log(res)})

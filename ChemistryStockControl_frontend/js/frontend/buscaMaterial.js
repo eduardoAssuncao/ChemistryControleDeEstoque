@@ -7,7 +7,7 @@ search_input.addEventListener("keyup", function (e){
     span_reagents_items.forEach(function(item){
         console.log(item.textContent)
         if(item.textContent.toLowerCase().indexOf(search_item) != -1){
-            item.closest("tr").style.display = "block";
+            item.closest("tr").style.display = "";
         }
         else{
             item.closest("tr").style.display = "none";
@@ -19,7 +19,7 @@ search_input.addEventListener("keyup", function (e){
     span_glassware_items.forEach(function(item){
         console.log(item.textContent)
         if(item.textContent.toLowerCase().indexOf(search_item) != -1){
-            item.closest("tr").style.display = "block";
+            item.closest("tr").style.display = "";
         }
         else{
             item.closest("tr").style.display = "none";

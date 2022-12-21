@@ -45,7 +45,7 @@ function show(data) {
                         <td>${r.validity}</td>
                         <td>${r.finalidade}</td>
                         <td>${r.sector}</td>
-                        <td><a href="#" class="more">Detalhes</a></td>
+                        <td><a href="/ChemistryStockControl_frontend/html/adm/verReagente.html" class="more">Detalhes</a></td>
                     </tr>
                 </tbody>`;
 	}

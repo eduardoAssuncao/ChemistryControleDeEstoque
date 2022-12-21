@@ -32,8 +32,8 @@ function showSolicitacao(data) {
         //arrumar informações setadas
 		tab += `<tbody>
         <tr scope="row">
-            <td><a href="#" class="name">${r.nome}</a></td>
-            <td>${r.quantidade}</td>
+            <td><a href="#" class="name">${r.codSolicitacao}</a></td>
+            <td>${r.user}</td>
             <td>${r.justificativa}</td>
             <td>${r.destino}</td>
             <td><a href="#"class="more">Detalhes</a></td>

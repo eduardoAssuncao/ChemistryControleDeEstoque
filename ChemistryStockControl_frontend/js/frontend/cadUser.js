@@ -46,4 +46,5 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
     if (itipo[0].checked) saveUserTeacher();
     else if (itipo[1].checked) saveUserReseacher();
+    window.location.href="/ChemistryStockControl_frontend/html/login.html";
 });
