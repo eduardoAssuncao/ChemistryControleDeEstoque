@@ -1,5 +1,5 @@
 # ChemistryControleDeEstoque
-Repositório da aplicação Chemistry que servirá para o controle de estoque e de requisições dos reagentes e vidrarias de laboratórios de química.
+Repositório da aplicação Chemistry que servirá para o controle de estoque e de requisições dos reagentes e vidrarias de laboratórios de química
 
 # Chemistry: controle de estoque
 <fig>
