@@ -31,7 +31,7 @@ O sistema é composto por um banco de dados e uma interface web. Funcionalidades
 
 * **F1** - Solicitação de materiais
 * **F2** - Cadastro de usuários e materiais
-* **F3** - Controle de estoque
+* **F3** - Controle de estoqu
 
 As ferramentas utilizadas para o desenvolvimento incluem Java, que é uma linguagem de programação utilizada para o Back-end (Spring Boot), para front-end foi utilizado HTML, CSS e JavaScript, e MySQL atuando como sistema gerenciador de banco de dados relacional.
 
